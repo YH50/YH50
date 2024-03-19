@@ -10,6 +10,7 @@
 - ⚡ Fun fact: Bilingual - 서울말 & 경상도 사투리
 
   **Social**
+  
   IG @yuno.dos.tres
 
 
