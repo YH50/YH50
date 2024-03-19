@@ -3,7 +3,7 @@
 
 
 
-- 👋 ¡Hola! Soy Yunho, o UNi
+- 👋 Soy Yunho, o UNi, o Jake
 - 👀 Interested in Sports, especially Baseball and Soccer
 - 🌱 Currently learning - Web Designing Program, and Spanish
 - 💞️ Big fan of Lotte Giants, and Ulsan HD FC
@@ -11,7 +11,7 @@
 - ⚡ Fun fact: Bilingual - 서울말 & 경상도 사투리
 
   **Social**
-
+  IG @yuno.dos.tres
 
 
 
