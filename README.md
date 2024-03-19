@@ -7,7 +7,6 @@
 - 👀 Interested in Sports, especially Baseball and Soccer
 - 🌱 Currently learning - Web Designing Program, and Spanish
 - 💞️ Big fan of Lotte Giants, and Ulsan HD FC
-- 📫 IG @yuno.dos.tres
 - ⚡ Fun fact: Bilingual - 서울말 & 경상도 사투리
 
   **Social**
