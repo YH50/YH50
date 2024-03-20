@@ -2,7 +2,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=¡Bienvenido!&fontsize=88&animation=fadeIn)
 
 
-<div align=center
+<div align=center>
 - 👋 Soy Yunho, o UNi, o Jake
 - 👀 Interested in Sports, especially Baseball and Soccer
 - 🌱 Currently learning - Web Designing Program, and Spanish
