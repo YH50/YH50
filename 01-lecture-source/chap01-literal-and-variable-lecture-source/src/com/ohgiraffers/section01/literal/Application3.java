@@ -48,7 +48,7 @@ public class Application3 {
         System.out.println("기차" + "칙칙폭폭"); //기차칙칙폭폭
         System.out.println("기차" + 123 + 34 + "칙칙폭폭"); //기차12334칙칙폭폭
         System.out.println(123 + 34 + "기차" + "출발"); //157기차출발
-        
+
 
     }
 }
