@@ -59,7 +59,7 @@ public class Application1 {
         System.out.println("sum에 추가로 10을 더하면? : " + sum);
         sum += 10;
         System.out.println("또 추가로 10을 더하면? : " + sum);
-        
+
     }
 
 
