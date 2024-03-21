@@ -20,6 +20,30 @@ public class Application2 {
         int num2 = 186;
         System.out.println("1부터 100 사이인지 확인 : "+ (num2 >= 1 && num2 <= 100));
 
+        /* 2. 영어의 대문자인지 확인 */
+        /* 영어 대문자임? ---> 문자 변수 >= 'A' && 문자 변수 <= 'Z' */
+        char ch = 'G';
+        System.out.println(" 영어의 대문자인지 확인 : " + (ch >= 'A' && ch <= 'Z'));
+        char ch0 = 'g';
+        System.out.println(" 영어의 대문자인지 확인 : " + (ch0 >= 'A' && ch0 <= 'Z'));
+
+        /* 3. 대소문자 상관 없이 영문자 y 인지 확인 */
+        /* 문자 변수 == 'y' || 문자 변수 == 'Y' */
+        char ch1 = 'y';
+        System.out.println(" 영문자 y인지 확인 : " + (ch1 == 'y' || ch1 == 'Y'));
+        char ch2 = 'Y';
+        System.out.println(" 영문자 Y인지 확인 : " + (ch2 == 'y' || ch2 == 'Y'));
+        // 둘 중 하나라도 맞으면 true 이기 때문에 둘 다 true 로 나옴.
+
+        /* 4. 영문자인지 확인 */
+        /* A = 65, Z = 90, a = 97, z = 122 >>> ASCII 코드 변환값 (중간 91~96은 영문자 x) */
+        char ch3 = 't';
+        char ch4 = 'ㅁ';
+        System.out.println(" 영문자인지 확인 : " + ((ch3 >= 'A'&& ch3 <='Z')||(ch3 >= 'a' && ch3 <= 'z')));
+        System.out.println(" 영문자인지 확인 : " + ((ch3 >= 65 && ch3 <= 90)||(ch3 >= 97 && ch3 <= 122)));
+
+        System.out.println(" 영문자인지 확인 : " + ((ch4 >= 'A'&& ch4 <='Z')||(ch4 >= 'a' && ch4 <= 'z')));
+
 
 
     }
