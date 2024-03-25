@@ -23,8 +23,11 @@ public class Application {
         //c.testSimpleIfElseIfStatement();
 
         //예제 실행 메소드 호출
-        c.testNextIfElseIfStatement();
+        //c.testNextIfElseIfStatement();
 
+        D_switch d = new D_switch();
+        //d.testSimpleSwitchStatement();
+        d.testSwitchVendingMachine();
 
 
     }
