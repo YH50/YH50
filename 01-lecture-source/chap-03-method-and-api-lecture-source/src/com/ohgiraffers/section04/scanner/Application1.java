@@ -19,14 +19,14 @@ public class Application1 {
         /*1-2. 다른 클래스에 클래스를 사용할 시 패키지명을 생략하기 위해 사용하는 구문을 사용
         * >> import */
 
-        Scanner sc1 = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         /* 2. 자료형 값 입력 받기 */
 
         /* 2-1. 문자열 입력받기 */
         /* nextLine() : 입력 받은 값을 문자열로 반환시켜줌 */
         System.out.print("이름을 입력하세요 : ");
-        String name = sc1.nextLine();
+        String name = sc.nextLine();
         System.out.println("입력하신 이름은 " + name + "입니다.");
 
 
@@ -34,7 +34,7 @@ public class Application1 {
         /* nextInt() : 입력받은 값을 int 형태로 변환한다. */
 
         System.out.print("숫자를 입력하세요 : ");
-        int age = sc1.nextInt();
+        int age = sc.nextInt();
         System.out.println("입력하신 정수는 "+ age + "입니다.");
 
 
@@ -42,13 +42,20 @@ public class Application1 {
         /* nextDouble() : 입력 받은 값을 double 형태로 변환한다. */
 
         System.out.print("원하는 실수를 입력해주세요 : ");
-        double num = sc1.nextDouble();
+        double num = sc.nextDouble();
         System.out.println("입력하신 실수는 " +num+ "입니다.");
 
         /* 2-4. 논리형 값 입력 받기 */
         /* nextBoolean() : 입력받은 값을 boolean 으로  변환한다. */
-        System.out.print("참과 거짓의 한가지를 true or false로 입력해주세요");
-        boolean isTrue = sc1.nextBoolean();
+        System.out.print("참과 거짓의 한가지를 true or false로 입력해주세요 : ");
+        boolean isTrue = sc.nextBoolean();
         System.out.println("입력하신 논리값은 "+isTrue+ "입니다.");
+
+        /* 2-5. 문자형 값 입력받기 */
+        /* charAt(int index) 사용 */
+        sc.nextLine();
+        System.out.print("아무 문자나 입력해주세요 : ");
+        char ch = sc.nextLine().charAt(0);
+        System.out.println("입력하신 문자는 " +ch+ "입니다.");
     }
 }
