@@ -1,5 +1,5 @@
 package Question2;
-
+ 
 public class Application2 {
 
     public static void main(String[] args) {
@@ -15,6 +15,8 @@ public class Application2 {
          //int numOfBucket = ?
 
          //System.out.println("필요한 바구니의 수 : " + numOfBucket); -> 10
+
+        int numOfBucket = numOfApples / sizeOfBucket + (numOfApples % sizeOfBucket > 0 ? 1 : 0);
 
 
 
