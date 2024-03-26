@@ -1,5 +1,7 @@
 package com.ohgiraffers.section01.conditional;
 
+import com.ohgiraffers.section02.looping.D_switch;
+
 public class Application {
 
     public static void main(String[] args) {
