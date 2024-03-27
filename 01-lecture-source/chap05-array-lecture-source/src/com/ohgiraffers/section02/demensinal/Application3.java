@@ -23,7 +23,7 @@ public class Application3 {
         iarr[1] = new int[2];
         int[] arr = new int[5];     //미리 할당해둔 배열을 이용해서도 활용할 수 있음.
         iarr[2] = arr;
-        //iarr[2] = new int[5]; 랑 똑같..나...?
+        //iarr[2] = new int[5]; 랑 똑같다.
 
 
 
