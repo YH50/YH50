@@ -1,5 +1,7 @@
 package com.ohgiraffers.section03.abstraction;
 
+import java.util.Scanner;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -33,14 +35,15 @@ public class Application {
 
         /*
          *  객체와 객체의 상호작용이란?
-         *  객체와 객체는 메세지를 통해 서로 상호작용을 한다. 메세지(메소드 호출)를 보내는 쪽을 송신자라고 하고
-         *  메세지를 수신하는 쪽을 수신자 라고 한다. 수신자는 메세지를 전달 받아 그 메세지에 해당하는 내용을 처리하는 방법을
-         *  스스로 결정하고, 그 결정한 방법 대로 처리할 명령어들을 순차적으로 기술한 것을 메소드라고 한다.
-         *  상호작용에 중요한 것은 메세지를 송수신 하고 그 방법을 기술하여 메세지에 응답하는 상호작용을 설계하는 것이다.
-         *  따라서 객체를 설계할 때는 속성은 부가적이며 적절한 책임을 가진 객체들간의
-         * 주고 받는 메세지를 이용해 상호작용하는 것을 설계하는 것을 의미한다.
-         *  즉, 필드보다는 메소드를 중점으로 추상화 기법을 적용하여 객체를 설계하고,
-         *  그 객체를 구현하는 방법으로 설계한 대로 클래스를 작성하는 것이다. 이것을 추상화라고 부른다.
+         *  객체와 객체는 메세지를 통해 서로 상호작용함.
+         *  메세지(메소드 호출)를 보내는 쪽 : 송신자 // 메세지를 수신하는 쪽 : 수신자
+         *  수신자 : 메세지를 전달 받아 그 메세지에 해당하는 내용을 처리하는 방법을 스스로 결정,
+         *  >> 그 결정한 방법대로 처리할 명령어들을 순차적으로 기술한 것 = 메소드
+         *  상호작용에 중요한 것 : 메세지를 송,수신하고 그 방법을 기술하여 메세지에 응답하는 상호작용을 설계하는 것.
+         *  >>> 객체를 설계할 때는 속성은 부가적이며 적절한 책임을 가진 객체들 간의
+         *  주고 받는 메세지를 이용해 상호작용하는 것을 설계하는 것을 의미함.
+         *  >>> 필드보다는 메소드를 중점으로 추상화 기법을 적용하여 객체를 설계하고,
+         *  그 객체를 구현하는 방법으로 설계한 구상대로 클래스를 작성하는 것 >>> 이게 추상화의 정의
          * */
 
         /*
@@ -106,6 +109,34 @@ public class Application {
         * - 행위(메소드) : 시동 걸기, 앞으로 가기, 멈추기, 시동 끄기
         * */
 
+        CarRacer hamilton = new CarRacer();
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true){
+
+            System.out.println("================= 카레이싱 프로그램 =================");
+            System.out.println("1. 시동 걸기");
+            System.out.println("2. 가속");
+            System.out.println("3. 정지");
+            System.out.println("4. 시동 끄기");
+            System.out.println("0. 프로그램 종료");
+            System.out.print("메뉴를 선택하세요 : ");
+            int no = sc.nextInt();
+
+            switch(no){
+                case 1 : hamilton.startUp();    break;
+                case 2 : hamilton.stepAccel();  break;
+                case 3 : hamilton.stepBreak();  break;
+                case 4 : hamilton.turnOff();    break;
+                case 0 : System.out.println("프로그램을 종료합니다.");    break;
+                default: System.out.println("잘못된 번호를 입력하셨습니다.");    break;
+            }
+
+            if(no == 0){
+                break;
+            }
+        }
 
     }
 }
