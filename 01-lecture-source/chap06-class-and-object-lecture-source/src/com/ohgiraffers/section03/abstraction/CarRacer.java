@@ -1,6 +1,6 @@
 package com.ohgiraffers.section03.abstraction;
 
-public class CarRacer {
+public class CarRacer {     //차를 운전하는 객체 >> 컨트롤러
 
     private Car car = new Car();
 

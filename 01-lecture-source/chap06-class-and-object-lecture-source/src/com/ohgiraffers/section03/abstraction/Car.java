@@ -1,6 +1,6 @@
 package com.ohgiraffers.section03.abstraction;
 
-public class Car {
+public class Car {      //기능을 수행할 객체
 
     private boolean isOn;   // 초기 시동이 꺼진 상태(false)
 
