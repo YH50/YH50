@@ -6,6 +6,6 @@ public class EagerSingleton {
 
     private EagerSingleton(){}
 
-    public static EagerSingleton getInstance(){return};
+    public static EagerSingleton getInstance(){return eager;}
 
 }

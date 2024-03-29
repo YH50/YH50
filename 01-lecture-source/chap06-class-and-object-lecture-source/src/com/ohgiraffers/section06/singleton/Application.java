@@ -31,8 +31,21 @@ public class Application {
 
 
         System.out.println("eager1.hashCode() = " + eager1.hashCode());
-
         System.out.println("eager2.hashCode() = " + eager2.hashCode());
+
+        LazySingleton lazy1 = LazySingleton.getInstance();
+        LazySingleton lazy2 = LazySingleton.getInstance();
+
+        System.out.println("lazy1.hashCode() = " + lazy1.hashCode());
+        System.out.println("lazy2.hashCode() = " + lazy2.hashCode());
+
+        /*
+        * 이른 초기화를 사용하면 클래스를 불러오는 속도가 느리지만
+        * 처음 인스턴스 반환 요청에서 속도가 빠르다는 장점이 있다.
+        *
+        * 반면 게으른 초기화는 클래스 로드하는 속도는 빠르지만
+        * 첫번째 요청에 대한 속도가 두번째 요청에 대한 속도보다 느리다는 특징이 있다.
+        * */
 
     }
 }
