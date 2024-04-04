@@ -35,6 +35,10 @@ public class Application2 {
             System.out.println(book);
         }
 
+
+        /* 익명 클래스 : 뒤에 {} 를 만들어서 인터페이스를 상속 받음
+        * >> 이름이 없다고 생각하고 사용하는 것.
+        * */
         bookList.sort(new Comparator<BookDTO>() {   // 익명 클래스
             @Override
             public int compare(BookDTO o1, BookDTO o2) {
@@ -44,6 +48,24 @@ public class Application2 {
         });
 
         System.out.println("가격 내림차순 정렬=====================");
+        for (BookDTO book : bookList){
+            System.out.println(book);
+        }
+
+
+        /*
+        * Comparator 인터페이스 : List에 default 메소드인 sort() 메소드를 인자로
+        *           정렬의 기준이 되는 인스턴스를 넣어주게 되면 우리가 오버라이딩한 메소드가 동작하게 되며
+        *               그것을 기준으로 삼는다.
+        * */
+        bookList.sort(new Comparator<BookDTO>() {
+            @Override
+            public int compare(BookDTO o1, BookDTO o2) {
+
+                return o1.getTitle().compareTo(o2.getTitle());
+            }
+        });
+        System.out.println("제목 오름차순 정렬=====================");
         for (BookDTO book : bookList){
             System.out.println(book);
         }
