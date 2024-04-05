@@ -28,6 +28,6 @@ public class Application2  {
 
         }finally{               //예외 발생 여부와 상관없이 실행
             System.out.println("finally 블럭 내용 작동함");
+        }
     }
-}
 }
