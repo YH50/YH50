@@ -90,8 +90,8 @@ create table rentlist(
 	idx number(3),		--대여기록번호
 --	rent_seq number(3)  	-- 하루 안에서 지정된 순번
 	rent_date date default sysdate,		--대여 날짜//		sysdate : 현재 시각 표시
-	bnum varchar2(5) not null,		--대여해간 도서번호
-	mnum varchar2(5) not null,		--대여한 회원의 회원번호
+	bnum number(5) not null,		--대여해간 도서번호
+	mnum number(5) not null,		--대여한 회원의 회원번호
 	discount number(4) default 500,		--할인 금액
 --	constraint rent_pk primary key(rent_date, rent_seq)
 	constraint rent_pk primary key(idx),
@@ -102,6 +102,7 @@ create table rentlist(
 );
 
 select * from rentlist;
+
 
 -- 외래키의 참조 대상이 되는 필드는 그 쪽 테이블의 기본키여야 함.
 

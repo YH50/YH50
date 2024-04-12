@@ -89,18 +89,20 @@ delete from MemberList;
 
 -- rentlist 테이블도 rent_seq로 10개 데이터 추가하기
 
-insert into rentlist values (rent_seq.nextVal, '2024.01.01', 7, 1, 720);
-insert into rentlist values (rent_seq.nextVal, '2024.01.01', 10, 2, 720);
-insert into rentlist values (rent_seq.nextVal, '2024.01.01', 11, 3, 720);
-insert into rentlist values (rent_seq.nextVal, '2024.01.01', 6, 4, 720);
+insert into rentlist values (rent_seq.nextVal, '2024.01.01', 1, 1, 720);
+insert into rentlist values (rent_seq.nextVal, '2024.01.01', 2, 2, 720);
+insert into rentlist values (rent_seq.nextVal, '2024.01.01', 3, 3, 720);
+insert into rentlist values (rent_seq.nextVal, '2024.01.01', 4, 4, 720);
 insert into rentlist values (rent_seq.nextVal, '2024.01.01', 5, 5, 720);
-insert into rentlist values (rent_seq.nextVal, '2024.03.23', 10, 6, 1000);
-insert into rentlist values (rent_seq.nextVal, '2024.03.23', 52, 7, 5200);
-insert into rentlist values (rent_seq.nextVal, '2024.03.23', 29, 8, 2900);
-insert into rentlist values (rent_seq.nextVal, '2024.03.23', 54, 9, 5400);
-insert into rentlist values (rent_seq.nextVal, '2024.03.23', 3, 10, 300);
+insert into rentlist values (rent_seq.nextVal, '2024.03.23', 6, 6, 1000);
+insert into rentlist values (rent_seq.nextVal, '2024.03.23', 7, 7, 5200);
+insert into rentlist values (rent_seq.nextVal, '2024.03.23', 8, 8, 2900);
+insert into rentlist values (rent_seq.nextVal, '2024.03.23', 9, 9, 5400);
+insert into rentlist values (rent_seq.nextVal, '2024.03.23', 10, 10, 300);
 
 select * from rentlist;
+delete from rentlist;
+drop table rentlist;
 
 commit		-- 현재 창에서 commit은 세미콜론을 붙히지 않음.
 
