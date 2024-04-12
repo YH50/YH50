@@ -9,7 +9,7 @@ alter table 테이블 이름 <수정내용>;
 alter user 유저 이름 identifed by 비밀번호;
 
 -- 1. 필드명의 변경
-alter table 테이블이름 remame column 변경 전 필드 이름 to 변경 후 이름;
+alter table 테이블이름 rename column 변경 전 필드 이름 to 변경 후 이름;
 
 --booklist 테이블의 subject 필드명을 title로 수정,
 alter table booklist RENAME column subject to title;
@@ -157,17 +157,3 @@ alter table ORDERS1 add constraint pro_check check (PROMOTION_ID between 10000 a
 CREATE TABLE orders2 as select * from ORDERS1;		-- 테이블 복사
 
 DROP TABLE orders2 purge;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
