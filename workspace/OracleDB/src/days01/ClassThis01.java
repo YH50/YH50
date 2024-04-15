@@ -38,14 +38,14 @@ public class ClassThis01 {
 //		Cclass c4 = c3;		//참조값의 복사
 //		c3.setNum(100);
 //		
-//		System.out.println(c4.getNum());	//100
-//		System.out.println(c3.getNum());	//100
+//		System.out.println(c4.getNum());		//100
+//		System.out.println(c3.getNum());		//100
 		
 		Cclass c4 = new Cclass();
 		c4.copy(c3);
 		c3.setNum(100);
-		System.out.println(c3.getNum());	
-		System.out.println(c4.getNum());	
+		System.out.println(c3.getNum());	//100
+		System.out.println(c4.getNum());	//30
 		
 
 	}
