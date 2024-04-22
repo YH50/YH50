@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <!-- 
+        Selector(선택자)
+        - 스타일을 지정하는 3가지 방법 중 2,3번째의 경우에서 기술한 스타일을 특정 태그에 적용하기 위해
+        선택하는 방법이 여러가지가 있는데
+        - 스타일 시트에 작성하고 지목한 선택 이름 : "Selector(선택자)"라고 하며
+            아래와 같이 선택자를 사용할 수 있다.
+        
+        1. Universal Selector
+        2. Tag Selector
+        3. Id Selector
+        4. Class Selector
+        5. 상대 위치 및 기타 Selector
+     -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_Selector.html</title>
+    <style type="text/css">
+        /* Universal selector */
+        /* * {color:darkmagenta;border:2px solid black;} */
+        /* 태그 전체 */
+
+        /* Tag Selector */
+        /* 태그의 이름을 선택자로 사용 >> ID처럼 #을 붙이지 않음. */
+        body{
+            margin:0px; border:2px dashed red;
+        }
+        /* margin : 해당 태그의 바깥쪽 여백 */
+
+        /* 같은 이름의 태그들에 모두 적용되기 때문에 특정 하나의 태그에 적용하기엔 부적합함. */
+        h1{color:#FF0000;}   /* 모든 h1 태그에 빨간 글씨 적용*/
+        h3{color:#0000FF;}   /* 모든 h3 태그에 파란 글씨 적용*/
+        /* 동일한 이름의 여러 개의 태그에 동일한 스타일을 적용할 때 적합함. */
+
+        img{width:100px; height:50px; border:1px solid gray; vertical-align: middle;}
+        /*이미지 크기 정렬*/
+        /* 
+            vertical-align: middle;     >> 그림과 텍스트의 수평 맞춤
+            top: 윗쪽 맞춤// bottom: 아랫쪽 맞춤// middle: 중간 맞춤
+         */
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS Selector Basic</h1>
+    <h3>간세네 관련 포스팅 : 한글 Lorem Ipsum 생성기</h3>
+    <p>주소 : http://guny.kr/stuff/klorem/ - 모든 국민은 주거의 자유를 침해받지 아니한다. 이후 생략</p>
+    <hr />
+    <h1>각 포털 사이트 로고</h1>
+    다음 <img src="images/daum.png">&nbsp;&nbsp;&nbsp;&nbsp;
+    페이스북 <img src="images/facebook.jpg">&nbsp;&nbsp;&nbsp;&nbsp;
+    네이트 <img src="images/nate.png">&nbsp;&nbsp;&nbsp;&nbsp;
+
+</body>
+</html>

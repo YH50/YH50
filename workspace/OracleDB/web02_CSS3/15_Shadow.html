@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15_Shadow.html</title>
+    <style type="text/css">
+        div {width: 600; margin-bottom: 20px; padding: 10px 30px; background: dodgerblue;
+            border: 2px solid red;}
+        .a{box-shadow: 5px 5px;}
+        /* 첫번째, 두번째 요소 - 각각 좌우, 상하 그림자 크기. 양수는 우하단, 음수는 좌상단으로 뻗음. */
+
+        .b{box-shadow: 5px 5px 5px;}
+        /* 3번째 요소 : 번짐 정도 표현 */
+
+        .c{box-shadow: 5px 5px 5px 5px;}
+        /* 4번째 요소 : 그림자 확장 표현 */
+
+        .d{box-shadow: 5px 5px 5px 5px orange;}
+        /* 5번째 요소 : 색깔 표현 */
+
+    </style>
+</head>
+<body>
+    <div class="a"><p>box-shadow : 5px 5px</p></div>
+    <div class="b"><p>box-shadow : 5px 5px 5px</p></div>
+    <div class="c"><p>box-shadow : 5px 5px 5px 5px</p></div>
+    <div class="d"><p>box-shadow : 5px 5px 5px 5px orange</p></div>
+</body>
+</html>

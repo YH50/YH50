@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- * position 속성 : 웹 문서 내의 요소들을 자유자재로 배치해주는 속성 (양수,음수 모두 사용 가능)
+    - HTML 태그의 위치 설정 방법을 변경할 때 사용.
+    - 상대적 위치 좌표 사용 시 키워드
+        > static : 요소를 문서의 흐름에 맞춰서 배치 (top/right/bottom/left) 이용 불가
+                float 속성을 이용하여 좌우로 배치할 수 있음.
+        > relative : 현재 위치를 기준으로 위치를 지정, 이전 요소에 자연스럽게 연결하여 배치.
+                (top/right/bottom/left) 이용하여 위치 지정 가능
+    - 절대적 위치 좌표 사용 시 키워드
+        > absolute : body 또는 컨테이닝 박스를 기준으로 위치를 지정할 수 있음, 원하는 위치 정해서 배치.
+                요소를 감싸는 <div>태그(컨테이닝박스)를 만들고 position을 relative로 지정 후 사용해야 함.
+        > fixed : 스크린을 기준으로 위치를 고정, 지정한 위치에 고정하여 배치.
+                화면에서 요소가 잘릴 수도 있음, 스크롤을 해도 위치가 이동하지 않음.           
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18_Position.html</title>
+    <style type="text/css">
+        /* static : 별도의 포지션 속성 지정 없이 사용 시 static으로 인식되어 사용됨. */
+        .box1 {width: 100px; background: blue; padding: 20px; color: white; font-weight: bold; float: left;}
+        .box2 {width: 300px; background: red; padding: 20px; color: white; font-weight: bold;
+             float: left; left: -50px; top: -30px;}
+    
+        .temp {clear: both; height: 50px;}
+        /* clear:both;  >> float 속성을 해제시키는 기능 */
+
+        .box3 {width: 100px; position: relative; background: lightgreen; padding: 20px; font-weight: bold; float: left;}
+        .box4 {width: 300px; position: relative; background: gold; padding: 20px; font-weight: bold;
+             float: left; left: -50px; top: -30px;}
+
+        
+        #wrap{position: relative; width: 300px; height: 300px; border: 1px solid saddlebrown;
+            background: white; overflow: scroll;}
+        /* 
+            
+        
+        */
+        .box5 {position: absolute; width: 50px; height: 50px; border: 1px solid blueviolet;}
+        #abs1{left: 0; top: 0;  background: navy;}
+        #abs2{left: 50px; top: 50px;   background: orangered;}
+        #abs3{left: 100px; top: 100px; background: navy;}
+        #abs4{left: 150px; top: 150px; background: orangered;}
+        #abs5{left: 200px; top: 200px; background: navy;}
+        #abs6{left: 250px; top: 250px; background: orangered;}
+        #abs7{left: 300px; top: 300px; background: navy;}
+
+
+    </style>
+</head>
+<body>
+    <h1>절대적 위치 좌표 - absolute</h1>
+    <div id="wrap">
+        <div id="abs1" class="box5"></div>
+        <div id="abs2" class="box5"></div>
+        <div id="abs3" class="box5"></div>
+        <div id="abs4" class="box5"></div>
+        <div id="abs5" class="box5"></div>
+        <div id="abs6" class="box5"></div>
+        <div id="abs7" class="box5"></div>
+    </div>
+    <div class="temp"></div><hr />
+
+
+    <h1>상대적 위치 좌표 - relative</h1>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+
+    <div class="temp"></div><hr />
+
+
+    <h1>상대적 위치 좌표 - static</h1>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+</body>
+</html>

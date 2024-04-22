@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_Checked.html</title>
+    <style type="text/css">
+        #text{width:650px; height: 300px; background: gold; overflow:hidden; transition-duration: 1s;}
+        input[type=checkbox]:checked ~ #text{height: 0px;}
+    </style>
+
+</head>
+<body>
+    <input type="checkbox" />체크하면 아래 텍스트가 사라집니다<br><br>
+    <div id="text">
+        <h1>Lorem ipsum</h1>
+        <p>서울엘지트윈스 서울두산베어스 서울키움히어로즈 인천SSG랜더스<br>
+            수원케이티위즈 대전한화이글스 대구삼성라이온즈<br>광주기아타이거즈 부산롯데자이언츠 창원엔씨다이노스
+        </p>
+    </div>
+
+</body>
+</html>

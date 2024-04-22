@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_Adjacent.html</title>
+    <style type="text/css">
+        /* 
+        인접(adjacent) 선택자 & 형제(sibling) 선택자
+        >> 하위 수준의 선택자가 아닌 같은 수준의 태그들을 선택할 때 사용.
+        */
+        h1 + h2{color:red;}
+        h2 + h3{color:orange;}
+        /*'+' : 지목된 요소 바로 뒤에 있는 요소를 지목 */
+        h1 + h3{background:violet;}
+        /* h1 바로 뒤에 h2인데 h3가 없기 때문에 적용이 되지 않음. */
+
+        h1 ~ h3{background:darkturquoise;}
+        /* 첫번째로 지목된 선택자(h1)의 뒤로 등장하는 이후 지목된 모든 형제선택자들(h3) */
+        /*'~' : 틸드 기호 */
+
+    </style>
+</head>
+<body>
+    <h1>Header - 1</h1>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h3>Header - 3</h3>
+    <h2>Header - 2</h2>
+    <h3>Header - 3</h3>
+</body>
+</html>
