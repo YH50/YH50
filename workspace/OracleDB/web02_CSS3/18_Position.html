@@ -34,7 +34,10 @@
         #wrap{position: relative; width: 300px; height: 300px; border: 1px solid saddlebrown;
             background: white; overflow: scroll;}
         /* 
-            
+            [overflow] 에서 지정할 키워드 종류
+            - hidden : 영역을 벗어나는 부분을 가림 처리함.
+            - scroll : 영역을 벗어나는 부분을 스크롤로 처리.
+            - auto : 영역을 벗어날 때 스크롤바가 생기고, 벗어나지 않으면 스크롤바가 숨겨짐.
         
         */
         .box5 {position: absolute; width: 50px; height: 50px; border: 1px solid blueviolet;}
@@ -46,10 +49,21 @@
         #abs6{left: 250px; top: 250px; background: orangered;}
         #abs7{left: 300px; top: 300px; background: navy;}
 
-
+        #fixed {position: fixed; top: 5px; left: 5px; width: 100px; height: 100px;
+                background: #000; opacity: 0.3; z-index: 10;}
+        /* opacity : 투명도 (0 ~ 1.0) */
+        /* 
+            z-index 속성 : default 값 : auto
+                - HTML 페이지에 입력한 태그가 다른 태그보다 하위에 위치하는 순서를 바꿀 때 사용.
+                - position 속성인 relative, absolute가 적용된 상태에서 적용해야 함.
+        */
     </style>
 </head>
 <body>
+    <h1>절대적 위치 좌표 - fixed</h1>
+    <div id="fixed"></div>
+    <div class="temp"></div><hr />
+
     <h1>절대적 위치 좌표 - absolute</h1>
     <div id="wrap">
         <div id="abs1" class="box5"></div>
