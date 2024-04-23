@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout03.html</title>
+    <style type="text/css">
+        body {
+            margin: 10;
+        }
+
+        .base1 {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            border: 1px solid black;
+
+        }
+
+        #text1 {
+            position: absolute;
+            width: 25%;
+            height: 100px;
+            margin: 0 auto;
+            text-align: center;
+            left: 41%;
+            /* width: 50%; */
+            line-height: 110px;
+            border: 1px solid red;
+
+        }
+
+        .base2 {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        #text2 {
+            position: absolute;
+            width: 44%;
+            margin: 0 auto;
+            text-align: center;
+            left: 33%;
+            height: 100px;
+            border: 1px solid dodgerblue;
+
+        }
+
+        .base3 {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        #view {
+            position: relative;
+            width: 60%;
+            height: 500px;
+            border: 1px solid purple;
+            left: 20%;
+        }
+
+        #box1 {
+            position: absolute;
+            background: red;
+            left: 0;
+            top: 0;
+            width: 70%;
+            height: 400px;
+        }
+
+        #box2 {
+            position: absolute;
+            width: 70%;
+            height: 400px;
+            /* overflow: hidden; */
+            right: 0;
+            bottom: 0;
+            background-image: url(images/Penguins.jpg);
+            background-size: 100%;
+        }
+
+        #box3 {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 30%;
+            height: 50%;
+            background: white;
+            box-shadow: 3px 3px 3px 3px black;
+        }
+
+        #box3 .titleS {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            margin: 0 auto;
+            border: 1px dotted dodgerblue;
+            font-size: 190%;
+            text-align-last: center;
+            line-height: 110px;
+            font-weight: bold;
+            z-index: 4;
+            background: white;
+        }
+
+        #box3 .text {}
+    </style>
+</head>
+
+<body>
+    <div class="base1">
+        <div id="text1">
+            <h1>LOTTE GIANTS</h1>
+        </div>
+    </div>
+
+    <div class="base2">
+        <div id="text2">
+            <p>2024년 4월 23일 SSG랜더스와 롯데자이언츠의 시즌 3번째 맞대결이
+                부산 사직야구장에서 열릴 예정이다. 선발투수는 엘리아스와 한현희가 맞붙는다.
+            </p>
+        </div>
+    </div>
+
+    <div class="base3">
+        <div id="view">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3">
+                <div class="titleS">Key Player</div>
+                <div class="text3">가나다라마바사</div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

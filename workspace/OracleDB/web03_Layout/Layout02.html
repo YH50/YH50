@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 직접 실습 해본 내용 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout02.html</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        .base {
+            position: relative;
+            width: 100%;
+            border: 2px solid black;
+            height: 500px;
+            top: 100px;
+        }
+
+        .box1 {
+            position: absolute;
+            width: 10%;
+            height: 400px;
+            background: navy;
+            border: 1px solid gray;
+            box-shadow: -5px 5px 5px 1px gray;
+            bottom: 50px;
+            left: 28%;
+        }
+
+        .box2 {
+            position: absolute;
+            width: 200px;
+            height: 400px;
+            background: whitesmoke;
+            border: 1px solid gray;
+            box-shadow: -5px 5px 5px 1px gray;
+            bottom: 50px;
+            left: 39%;
+        }
+
+        .box3 {
+            position: absolute;
+            width: 50%;
+            height: 400px;
+            background: orangered;
+            border: 1px solid black;
+            box-shadow: -5px 5px 5px 1px gray;
+            bottom: 50px;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="base">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>

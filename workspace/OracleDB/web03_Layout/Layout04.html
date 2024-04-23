@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout04.html</title>
+    <style type="text/css">
+        body {
+            margin: 10;
+        }
+
+        .base {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            border: 1px dotted black;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .titleM {
+            position: relative;
+            border: 2px solid darkred;
+            width: 22%;
+            height: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .text1 {
+            position: relative;
+            border: 2px solid orangered;
+            width: 22%;
+            height: 50%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 150%;
+            font-weight: bold;
+
+
+        }
+
+
+        .box {
+            position: relative;
+            border: 2px solid darkcyan;
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        /* .temp {
+            position: relative;
+            width: 100px;
+            height: 200px;
+            float: left;
+        } */
+
+        .pic1 {
+            position: absolute;
+            width: 200px;
+            height: 100%;
+            background-image: url(images/HR\ Kang.jpeg);
+            background-size: cover;
+            border-radius: 100%;
+        }
+
+        .pic2 {
+            position: absolute;
+            width: 200px;
+            height: 100%;
+            background-image: url(images/Penguins.jpg);
+            background-size: cover;
+            border-radius: 100%;
+            left: 300px;
+        }
+
+        .pic3 {
+            position: absolute;
+            width: 200px;
+            height: 100%;
+            background-image: url(images/Tulips.jpg);
+            background-size: cover;
+            border-radius: 100%;
+            left: 600px;
+        }
+
+        .pic4 {
+            position: absolute;
+            width: 200px;
+            height: 100%;
+            background-image: url(images/전준우.jpg);
+            background-size: cover;
+            border-radius: 100%;
+            left: 900px;
+        }
+
+        /* 
+        .box .bbltitle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 100px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        .box .bbltext {
+            position: relative;
+            width: 200px;
+            height: 130px;
+
+        } */
+
+
+
+        .bbltitle {
+            position: absolute;
+            background: sienna;
+            width: 200px;
+            height: 30%;
+            line-height: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .bbltext {
+            position: absolute;
+            color: sienna;
+            width: 200px;
+            height: 70%;
+            /* line-height: 50%; */
+            margin: 0 auto;
+            text-align: center;
+            top: 30%;
+            border: 1px solid skyblue;
+            font-size: 80%;
+            font-weight: bold;
+        }
+
+
+        /* .bbtitle {
+            position: absolute;
+            background: sienna;
+            width: 200px;
+            height: 30%;
+            line-height: 50%;
+            margin: 0 auto;
+            text-align: center;
+            left: 300px;
+        }
+
+        .bbtext {
+            position: absolute;
+            color: sienna;
+            width: 200px;
+            height: 70%;
+            margin: 0 auto;
+            text-align: center;
+            top: 30%;
+            border: 1px solid skyblue;
+            font-size: 80%;
+            left: 300px;
+            font-weight: bold;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="base">
+        <div class="titleM">
+            <h1>LOTTE GIANTS</h1>
+        </div>
+        <div class="text1">
+            鬪魂, 鬪志<br /> TO THE TOP 5
+        </div>
+    </div>
+    <div class="base">
+        <div class="box">
+            <div class="pic1"></div>
+            <!-- <div class="temp"></div> -->
+            <div class="pic2"></div>
+            <!-- <div class="temp"></div> -->
+            <div class="pic3"></div>
+            <!-- <div class="temp"></div> -->
+            <div class="pic4"></div>
+
+        </div>
+    </div>
+    <div class="base">
+        <div class="box">
+            <div class="bbltitle">
+                <h1>Chant</h1>
+            </div>
+            <div class="bbltext">
+                꽃피는 동백섬에 봄이 왔건만 형제 떠난 부산항에 갈매기만 슬피 우네
+                오륙도 떠나가는 연락선마다 목메어 불러봐도 대답없는 내형제여
+                돌아와요 부산항에 그리운 내형제여
+            </div>
+
+            <div class="temp"></div>
+            <!-- 
+            <div class="bbltitle">
+                <h1>Chant</h1>
+            </div>
+            <div class="bbltext">
+                꽃피는 동백섬에 봄이 왔건만 형제 떠난 부산항에 갈매기만 슬피 우네
+                오륙도 떠나가는 연락선마다 목메어 불러봐도 대답없는 내형제여
+                돌아와요 부산항에 그리운 내형제여
+            </div>
+            <div class="temp"></div> -->
+            <!-- 
+            <div class="bbltitle">
+                <h1>Chant</h1>
+            </div>
+            <div class="bbltext">
+                꽃피는 동백섬에 봄이 왔건만 형제 떠난 부산항에 갈매기만 슬피 우네
+                오륙도 떠나가는 연락선마다 목메어 불러봐도 대답없는 내형제여
+                돌아와요 부산항에 그리운 내형제여
+            </div>
+            <div class="temp"></div>
+
+            <div class="bbltitle">
+                <h1>Chant</h1>
+            </div>
+            <div class="bbltext">
+                꽃피는 동백섬에 봄이 왔건만 형제 떠난 부산항에 갈매기만 슬피 우네
+                오륙도 떠나가는 연락선마다 목메어 불러봐도 대답없는 내형제여
+                돌아와요 부산항에 그리운 내형제여
+            </div> -->
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout05.html</title>
+    <style type="text/css">
+        body {
+            margin: 10;
+        }
+
+        .base {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            border: 1px solid silver;
+            background: lemonchiffon;
+            margin-bottom: 2%;
+        }
+
+        .titleM {
+            position: relative;
+            border: 1px solid darkred;
+            width: 22%;
+            height: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .text1 {
+            position: relative;
+            border: 1px solid orangered;
+            width: 22%;
+            height: 50%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 150%;
+            font-weight: bold;
+        }
+
+        .box {
+            position: relative;
+            border: 1px solid darkcyan;
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .box .pic1 {
+            position: relative;
+            background-image: url(images/HR\ Kang.jpeg);
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            border-radius: 100%;
+            display: inline-block;
+            float: left;
+        }
+
+        .box .pic2 {
+            position: relative;
+            background-image: url(images/전준우.jpg);
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            border-radius: 100%;
+            display: inline-block;
+            float: left;
+        }
+
+        .rect {
+            position: relative;
+            width: 350px;
+            height: 200px;
+            border: 1px solid crimson;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .rect .head {
+            position: relative;
+            width: 350px;
+            height: 70px;
+            font-size: 200%;
+            font-weight: bold;
+            line-height: 70px;
+            text-align: center;
+            margin: 0 auto;
+            background: crimson;
+            color: white;
+        }
+
+        .rect .txt {
+            position: relative;
+            color: crimson;
+            width: 350px;
+            height: 70px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="base">
+        <div class="titleM">
+            <h1>Let Me Go Home, PLZ</h1>
+        </div>
+        <div class="text1">
+            鬪魂, 鬪志<br /> LOTTE GIANTS
+        </div>
+    </div>
+
+    <div class="base">
+        <div class="box">
+            <div class="pic1"></div>
+            <div class="rect">
+                <div class="head">KOREA UNIV.</div>
+                <div class="txt">
+                    자 지축을 박차고 자 포효하라 그대<br> 조국의 영원한 고동이 되리라<br><br>
+                    우리의 함성은 신화가 되리라<br> 울려라 이곳에 포에버
+                </div>
+            </div>
+            <div class="pic1"></div>
+            <div class="rect">
+                <div class="head">KOREA UNIV.</div>
+                <div class="txt">
+                    자 지축을 박차고 자 포효하라 그대<br> 조국의 영원한 고동이 되리라<br><br>
+                    우리의 함성은 신화가 되리라<br> 울려라 이곳에 포에버
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="base">
+        <div class="box">
+            <div class="pic2"></div>
+            <div class="rect">
+                <div class="head">KOREA UNIV.</div>
+                <div class="txt">
+                    자 지축을 박차고 자 포효하라 그대<br> 조국의 영원한 고동이 되리라<br><br>
+                    우리의 함성은 신화가 되리라<br> 울려라 이곳에 포에버
+                </div>
+            </div>
+
+            <div class="pic2"></div>
+            <div class="rect">
+                <div class="head">KOREA UNIV.</div>
+                <div class="txt">
+                    자 지축을 박차고 자 포효하라 그대<br> 조국의 영원한 고동이 되리라<br><br>
+                    우리의 함성은 신화가 되리라<br> 울려라 이곳에 포에버
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout01_html</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        .base {
+            position: relative;
+            width: 100%;
+            border: 3px dotted black;
+            height: 500px;
+            top: 100px;
+        }
+
+        .box1 {
+            position: absolute;
+            width: 50%;
+            height: 500px;
+            background: yellow;
+            border: 1px solid red;
+            top: 0;
+            left: 0;
+            /*right: 50%로 써도 동일함.*/
+        }
+
+        .box2 {
+            position: absolute;
+            height: 400px;
+            width: 50%;
+            background: orange;
+            border: 1px solid lightgreen;
+            bottom: 50px;
+            /* top: 50px; */
+            right: 5%;
+            /* left: 40%; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="base">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>
