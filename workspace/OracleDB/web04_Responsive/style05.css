@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 300px;
+    border: 10px solid goldenrod;
+    display: flex;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: rgb(187, 3, 73);
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+}
+
+#container1 {
+    flex-wrap: wrap;
+}
+
+#container2 {
+    flex-wrap: nowrap;
+    /* 안써도 이미 기본값임 */
+}

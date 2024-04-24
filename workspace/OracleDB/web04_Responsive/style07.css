@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 400px;
+    border: 10px solid goldenrod;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: rgb(57, 228, 219);
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+}
+
+#container1 {
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+#container2 {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#container3 {
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#container4 {
+    flex-wrap: wrap;
+    align-content: space-between;
+}

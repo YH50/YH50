@@ -1,0 +1,10 @@
+/* style.css */
+
+#div5{
+    width:200px;
+    height:200px;
+    background-color:goldenrod;
+    margin:5px;
+}
+
+#div6{width:200px; height:200px; background-color:silver; margin:5px; }

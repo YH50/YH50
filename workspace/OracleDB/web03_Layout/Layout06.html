@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout06.html</title>
+    <style type="text/css">
+        body {
+            margin: 10;
+        }
+
+        .base {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            border: 1px solid navy;
+            background: ivory;
+            margin-bottom: 10px;
+        }
+
+        .titleM {
+            position: relative;
+            border: 1px solid dodgerblue;
+            width: 22%;
+            height: 50%;
+            margin: 0 auto;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .text1 {
+            position: relative;
+            border: 1px solid orangered;
+            width: 22%;
+            height: 50%;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 150%;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        /* .base2 {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            border: 1px solid navy;
+            background: ivory;
+        } */
+
+        .view {
+            position: relative;
+            width: 1100px;
+            height: 600px;
+            border: 1px solid darkgoldenrod;
+            margin: 0 auto;
+        }
+
+        .rect {
+            position: relative;
+            border: 1px solid darkcyan;
+            width: 350px;
+            height: 600px;
+            float: left;
+            margin-right: 20px;
+            box-sizing: border-box;
+        }
+
+        /* .rect:last-child {
+            margin-right: 0;
+        } */
+
+        .box {
+            position: relative;
+            width: 310px;
+            height: 280px;
+            background: white;
+            margin: 0 auto;
+            border: 1px solid black;
+            box-shadow: 5px 5px 5px;
+            top: -30px;
+        }
+
+        .box .tle {
+            position: relative;
+            width: 280px;
+            height: 80px;
+            margin: 0 auto;
+            border: 1px dotted black;
+            font-size: 200%;
+            font-weight: bold;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .box .txt {
+            position: relative;
+            width: 280px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px dotted black;
+            font-size: 90%;
+            color: gray;
+        }
+
+        .button {
+            position: absolute;
+            width: 150px;
+            height: 40px;
+            background: blue;
+            color: white;
+            font-size: 150%;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            right: 0;
+            bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="base">
+        <div class="titleM">
+            <h1>Let's Go GIANTS</h1>
+        </div>
+        <div class="text1">
+            鬪魂, 鬪志<br /> LOTTE GIANTS
+        </div>
+    </div>
+    <div class="base" style="height: 600px;">
+        <div class="view">
+            <div class="rect">
+                <div class="image"><img src="images/최동원11.jpg" width="350" height="300" </div>
+                    <div class="box">
+                        <div class="tle">Baseball</div>
+                        <div class="txt">
+                            자 지축을 박차고 자 포효하라 그대<br> 조국의 영원한 고동이 되리라<br><br>
+                            우리의 함성은 신화가 되리라<br> 울려라 이곳에 포에버
+                        </div>
+                        <div class="button">BUTTON</div>
+                    </div>
+                </div>
+            </div>
+            <div class="rect">
+                <div class="image"><img src="images/전준우8.jpg" width="350" height="300" </div>
+                    <div class="box">
+                        <div class="tle">Baseball</div>
+                        <div class="txt">
+                            자 지축을 박차고 자 포효하라 그대<br> 조국의 영원한 고동이 되리라<br><br>
+                            우리의 함성은 신화가 되리라<br> 울려라 이곳에 포에버
+                        </div>
+                        <div class="button">BUTTON</div>
+                    </div>
+                </div>
+                <div class="rect">
+                    <div class="image"><img src="images/전미르61.jpg" width="350" height="300" </div>
+                        <div class="box">
+                            <div class="tle">Baseball</div>
+                            <div class="txt">
+                                자 지축을 박차고 자 포효하라 그대<br> 조국의 영원한 고동이 되리라<br><br>
+                                우리의 함성은 신화가 되리라<br> 울려라 이곳에 포에버
+                            </div>
+                            <div class="button">BUTTON</div>
+                        </div>
+                    </div>
+                </div>
+</body>
+
+</html>
