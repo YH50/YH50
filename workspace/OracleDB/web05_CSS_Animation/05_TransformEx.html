@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_TransformEx.html</title>
+    <style type="text/css">
+        .base {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        #tire {
+            position: relative;
+            border-radius: 50%;
+            line-height: 200px;
+            text-align: center;
+            font-size: 30px;
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            background: salmon;
+            background-image: url(images/ddalbae.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border: 3px solid darkgoldenrod;
+            font-weight: bold;
+            transition: 2s;
+        }
+
+        #tire:hover {
+            transform: translateX(500px) rotate(2160deg) scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="base">
+        <div id="tire">
+        </div>
+    </div>
+</body>
+
+</html>
