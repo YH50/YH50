@@ -89,12 +89,21 @@
         document.write("<h2>objectVar : " + objectVar + "</h2>");
 
         // 13. 자바스크립트 변수의 특별 기능(2) (1. 함수 저장 기능)
-        // >> 변수의 선언 없이도 변수의 사용이 가능함.
-        number = 100;
-        document.write("<h2>number 변수 값: " + number + "</h2>");
+            // >> 변수의 선언 없이도 변수의 사용이 가능함.
+            number = 100;
+            document.write("<h2>number 변수 값: " + number + "</h2>");
 
-        //단, 대입된 값이 존재하지 않는다면 Undefined 가 되어 에러가 발생함.
-        document.write("<h2>typeof(number1): " + typeof(number1) + "</h2>");
+            //단, 대입된 값이 존재하지 않는다면 Undefined 가 되어 에러가 발생함.
+            document.write("<h2>typeof(number1): " + typeof(number1) + "</h2>");
+
+            // 변수값이 Undefined 로 뜨는 경우
+            // 변수는 생성했지만 값을 대입하지 않았을 때
+            var variable2
+            document.write("<h2>2." + variable2 + "</h2>"); //undefined
+            document.write("<h2>2." + typeof(variable2) + "</h2>"); //undefined
+
+
+
 
 
 
