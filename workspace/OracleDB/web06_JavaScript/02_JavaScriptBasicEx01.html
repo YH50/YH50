@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_JavaScriptBasicEx01.html</title>
+</head>
+
+<body>
+    <script type="text/JavaScript">
+        // 원의 반지름을 입력받아서 원의 넓이, 둘레를 document.write로 출력하기
+        /* 양식 */
+        /* 
+        입력하신 반지름 @@에 대한 
+        원의 넓이 : ##.##
+        원의 둘레 : ##.##
+        */
+
+        var radius = prompt("반지름 얼마로 할란교?");
+        var pi = 3.141592;
+        var cir = radius*2*pi;
+        var sqr = radius*radius*pi;
+        document.write("<h2>원 둘레는 " + cir + " 되겠십니다.</h2>");
+        document.write("<h2>원 넓이는 " + sqr + " 되겠십니다.</h2>");
+
+
+    </script>
+</body>
+
+</html>

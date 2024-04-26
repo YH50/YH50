@@ -17,7 +17,8 @@
             width: 1000px;
             display: flex;
             height: 300px;
-            /* border: 1px solid red; */
+            border: 1px solid red;
+            color: ivory;
             justify-content: space-between;
         }
 
@@ -26,7 +27,8 @@
             height: 300px;
             /* border: 1px dotted black; */
             position: relative;
-            /* overflow: hidden; */
+            transition-duration: 0.5s;
+            transition-delay: 0.3s;
         }
 
         .caption {
@@ -34,8 +36,10 @@
             width: 300px;
             height: 300px;
             position: absolute;
-            top: 300px;
-            opacity: 0.7;
+            top: 0;
+            opacity: 0;
+            transition-duration: 0.5s;
+            transition-delay: 0.1s;
         }
 
         .caption h1,
@@ -51,8 +55,7 @@
         }
 
         .caption:hover {
-            transition: 1s;
-            transform: translateY(-300px);
+            opacity: 0.7;
         }
     </style>
 </head>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_JavaScript02.html</title>
+    <script type="text/JavaScript">
+        // 자바스크립트의 함수(method of JAVA)
+    function abc() {
+        document.write
+            ("<h2>자바스크립트의 일반적인 함수, 자바처럼 호출함.<h2>")
+    };
+        abc();
+    function abc2(){
+        alert("자바스크립트의 일반적 함수, 버튼으로 호출함.</h2>");
+        };
+        var fv1 = function(){
+            document.write('<h2>함수를 변수에 저장 후 변수 이름으로 호출하겠음<h2>');
+        }
+        fv1();
+        var fv2 = function() {
+            alert("함수를 변수에 저장 후 변수 이름으로 저장하겠음")
+        }
+
+        // function(){} : 익명함수라고 함.
+        // 이름이 없으므로 변수에 저장되어 변수 이름으로 호출되어야 함.
+
+        document.write("<h2>" + fv1 + "</h2><br>");
+        // 함수를 저장하고 있는 변수의 내용을 출력할 수 있음
+        // 함수의 몸체 내용이 출력됨.
+
+        // 8. 복합 대입 연산자 : +=, -=, *=, /=, %=
+        var value = 10;
+        value += 10;
+        document.write("<h2>" + value + "</h2>");
+
+        value = "Los Angeles";
+        value += " Dodgers";
+        document.write("<h2>" + value + "</h2>");
+
+        // 9. 증감 연산자
+        var num = 10;
+        document.write("<h2>" + (++num + 5) + "</h2>");
+        num = 10;
+        document.write("<h2>" + (num++ + 5) + "</h2>");
+        // 출력은 15이지만 현 시점부로 사용하게 될 값은 16.
+
+        // 10. 변수의 특징과 변수들 간의 연산
+        /* 
+        >> 변수는 가장 마지막에 대입한 값을 기억하게 됨
+        >> 문자들 간의 + 연산은 이어붙이기 연산임
+        >> 문자와 숫자 간의 + 연산 역시 이어붙이기 연산이 되어 최종 문자 결과가 생성됨
+        */
+        var cup = 'Coffee';
+        cup = 'Green Tea';
+        cup = 'Water';
+        document.write('<h2>Drink ' + cup + '...!</h2>');
+        var number = 10;
+        document.write('<h2>숫자 값 : ' + number + '</h2>');
+        var num = 1234 + "";    //num 변수에는 "1234" 문자 형태로 저장됨.
+
+        // 11. 자료형 검사
+        //문자열
+        document.write("<h2>'파마니' : " + typeof("파마니") + "</h2>");
+        //숫자
+        document.write("<h2>0722 : " + typeof(0722) + "</h2>");
+        document.write("<h2>722.515 : " + typeof(722.515) + "</h2>");
+        //Boolean
+        document.write("<h2>true : " + typeof(true) + "</h2>");
+        //함수
+        document.write("<h2>function(){} : " + typeof(function(){}) + "</h2>");
+
+        // 12. 자바스크립트에서 사용하는 객체(사용자 정의)
+        /*
+         > 자바스크립트에선 클래스라는 개념이 없다고 봐도 무방함.
+         > 클래스 형태로 만들어지지 않는 "자유 형태"의 객체가 사용됨.
+         > 하나의 변수 안에 여러 멤버 변수(속성)와 멤버 함수를 생성해놓은 것을 객체라 칭함.
+        */
+        var objectVar = {a:10, b:20};
+        // 객체 변수 objectVar에 객체를 저장 > 그 객체 안에는 a & b 의 멤버 변수가 존재.
+        // a - 10, b - 20 을 각각 저장.
+        document.write("<h2>" + typeof({a:10, b:20}) + "</h2>");
+        document.write("<h2>" + typeof(objectVar) + "</h2>");
+
+        //public, private 규칙? 여긴 그런거 없음.
+        document.write("<h2>objectVar.a : " + objectVar.a + "</h2>");
+        document.write("<h2>objectVar.b : " + objectVar.b + "</h2>");
+        document.write("<h2>objectVar : " + objectVar + "</h2>");
+
+        // 13. 자바스크립트 변수의 특별 기능(2) (1. 함수 저장 기능)
+        // >> 변수의 선언 없이도 변수의 사용이 가능함.
+        number = 100;
+        document.write("<h2>number 변수 값: " + number + "</h2>");
+
+        //단, 대입된 값이 존재하지 않는다면 Undefined 가 되어 에러가 발생함.
+        document.write("<h2>typeof(number1): " + typeof(number1) + "</h2>");
+
+
+
+    </script>
+
+    <head>
+
+    <body>
+        <script type="text/JavaScript">
+        //abc(); 함수의 호출과 정의는 헤드, 바디 아무데서나 호출 가능/
+        //일반적으로 헤드에서 정의 후 바디에서 호출.
+    </script>
+        <input type="button" value="클릭" onclick="abcfv2()" />
+        <input type="button" value="클릭" onclick="fv2()" />
+    </body>
+
+</html>

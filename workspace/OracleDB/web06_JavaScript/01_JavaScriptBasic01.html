@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- 
+    JavaScript(자바 스크립트)
+    1.HTML5 언어로 마크업하며, 만드는 웹페이지의 정적인 기능들을 확장하고
+    페이지를 좀 더 동적으로 만들기 위해 이용하는 프론트 개발 언어.
+
+    2. 주로 HTML5에서 불가능한 사칙연산 및 관계연산 등을 실행할 때 사용하며,
+    기능적인 면이나 이벤트(클릭, 더블 클릭 등)에 대한 동작을 처리할 때 사용함.
+
+    3. 브라우저 및 화면에 표시될 태그들을 대상으로 하는 객체들이 정의되어 있으며,
+    자바의 객체지향 언어 형식의 프로그램이 작성됨.
+
+    4. 브라우저 상에서 일어날 수 있는 사용자 입력, 해당 연산, 이벤트에 의한 출력의 기능을 구현.
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_JavaScriptBasic01.html</title>
+    <!-- 자바스크립트 코딩하는 부분 : <script></script> -->
+    <script type="text/JavaScript">
+        // 이 안에서는 자바 주석문이랑 동일하게 사용됨.
+        /* 
+            자바스크립트 주석문 기호1 : 여러 줄 주석 처리
+            자바스크립트 주석문 기호1 : 여러 줄 주석 처리
+            >> Alt + Shift + A
+        */
+        // 한 줄 주석 처리 >> ctrl + /
+        /* 
+            <script type="text/JavaScript">
+            ->> head & body 어디든 자바스크립트가 필요한 곳에 열어두고 코딩 가능.
+            ->>  실행 순서 : head > body, 동일 영역 내에서는 먼저 쓰인 순서대로 실행됨.
+        */
+    //    window.alert("안녕하세요"); //경고문
+        // document.write("<h1>Hello JavaScript #1</h1>");    //body에 출력
+        
+        //window : chrome 또는 edge 브라우저의 구성 요소를 담고 정의된 객체
+        //document : 웹 페이지의 body에 해당하는 영역의 구성 요소를 담고 정의된 객체
+        //둘 다 미리 정의되고 생성되어있는 활용 가능한 상태의 객체임.
+
+        // 1. alert 명령
+        /* 
+        >> 자바 스크립트 안에 내장된 window 객체 내의 멤버 메소드
+        >> 사용할 때 window.를 생략할 수도 있음
+        >> 자바스크립트에서는 화면에 표시되는 윈도우를
+            window라는 이름으로 정의한 객체로 다루게끔 환경 객체를 내장하고 있음.
+        */
+
+        // 2. 문자 자료형
+        /* 
+        >> 문자형 자료 & 숫자형 자료 로 구분 : 이들을 임시저장하는 변수도 존재함
+        >> Java 와 달리 JavaScript 문자 자료형은 작은 따옴표와 큰 따옴표를 모두 문자 자료형으로 사용.
+            (char & String 구분 없음)
+            ** 단 둘을 혼용할 수는 없음. ("JavaScript' >> 이래 쓰면 안된다 이말이야 )
+        */
+
+        // String 데이터 내부에 따옴표를 이용한 인용부호를 넣고 싶을 때
+        document.write("<h2>Come on, 'Dodgers' </h2>");
+        document.write('<h2>Come on, "Dodgers" </h2>');
+
+        //큰(작은)따옴표 내에서 큰(작은)따옴표로 인용부호를 쓰려면 이렇게 써야함.
+        document.write("<h2>Come on, \"Dodgers\" </h2>");
+        document.write('<h2>Come on, \'Dodgers\' </h2>');
+
+        // 3. 숫자 자료형
+        /* 
+        >> 자바스크립트에서 숫자자료는 정수와 실수로만 구분하고, 그 외에는 구분없이 사용
+        */
+        document.write('<h1>' + 365 + '</h1>');
+        document.write('<h1>' + 3.65 + '</h1>');
+
+        // 4. 산술 연산자
+        /* 
+        >> 자바에서 쓰는 산술 연산자와 동일한 사용법
+        >> 정수 간의 나눗셈 연산도 결과에 소수점 아래 숫자가 있으면 다 표시됨.
+        */
+       document.write("<h1>61 + 50 = " + (61+50) + "</h1>");
+       document.write("<h1>61 - 50 = " + (61-50) + "</h1>");
+       document.write("<h1>61 * 50 = " + (61*50) + "</h1>");
+       document.write("<h1>61 / 50 = " + (61/50) + "</h1>");
+       //자바는 1을 띄우겠지만 여기선 1.22로 결과 다 띄워줌
+       document.write("<h1>61 % 50 = " + (61%50) + "</h1>");
+
+        // 5. 관계 연산자 (>, >=, <, <=, ==, !=)
+        // 6. 논리 연산자 (&&, ||, !)
+        document.write('<h2>(52 > 135) && (45 < 78) =>' + ((52 > 135) && (45 < 78)) + '</h1>');
+        // 52가 135 보다 크면서, 45가 78보다 작다 => False
+        document.write('<h2>!(52 > 135) =>' + (!(52 > 135)) + '</h1>');
+        // 52는 135 보다 크지 않다 => True
+        
+        // 7. 변수
+        // 자바스크립트의 변수 선언
+        var a = 10; //a를 변수로 생성 후 10을 저장
+        a = 'abcd'; //저장 데이터의 자료형이 자유로움.
+        /* 모든 변수는 var로 선언 명령을 내림,
+            변수의 자료형은 현재 저장되어 있는 자료형에 따라 바뀜. */
+        a = 123.345;
+        a = true;
+        
+        var radius = 7; //정수
+        var pi = 3.14 //실수
+        document.write("<h1>" + pi + "</h1>");
+        document.write("<h1>" + (2*pi*radius) + "</h1>");   //원 둘레 길이
+
+        pi = "GO Dodgers";  //실수가 저장되었던 변수에 다시 문자를 저장
+        document.write("<h1>" + pi + "</h1>");
+        document.write("<h1>" + (2*pi*radius) + "</h1>");
+        
+        //변수를 선언하지 않고도 사용 가능
+        abcd = 5678;
+        document.write("<h1>" + abcd + "</h1>");
+
+        //자바스크립트의 입력
+        // window.confirm
+        var ans;
+        ans = window.confirm('다음의 확인과 취소 중 하나를 선택');
+        if(ans == true){
+            document.write('<h2>확인을 선택하셨습니다.');
+        }else{
+            document.write('<h2>취소를 선택하셨습니다.');
+        }
+        /* 
+        게시판 또는 회원 정보의 수정 삭제 시 사용됨
+        "정말로 삭제하시겠어요?"    "입력한 내용으로 수정하시겠어요?"
+        */
+
+        //prompt
+        //"당신의 이름을 입력하세요"
+        ans = prompt('그래서 당신 이름이 뭔데예?');
+        document.write("<h2>" + ans + " 행님 어서오이소~</h2>");
+
+
+    </script>
+</head>
+
+<body>
+    <script type="text/JavaScript">
+        // window.alert("Hola Que Tal"); //경고문
+        // document.write("<h1>Hello JavaScript #2</h1>");    //body에 출력
+
+    </script>
+
+</body>
+
+</html>
