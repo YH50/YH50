@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18_ImageControl02.html</title>
+    <script type="text/javaScript">
+        // 그림 클릭 시 입력창이 나오게, 그 입력창에서 숫자를 입력받아서 숫자.jpg 파일로 그림을 바꾸는 코드 완성하기
+        //입력창 메시지 : 숫자 입력하이소 (1~10)
+
+        function changeImg(){
+            var num = prompt("숫자 입력하이소(1~10)","1");
+            document.getElementById("target").src = "images/"+ num + '.jpg';
+
+        }
+    </script>
+</head>
+
+<body>
+    <img src="images/1.jpg" id="target" onclick="changeImg()">
+</body>
+
+</html>
