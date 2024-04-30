@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29_SelectTag.html</title>
+    <style type="text/css">
+        #title {
+            position: relative;
+            width: 200px;
+            height: 30px;
+            border: 1px solid gray;
+            line-height: 30px;
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+        #num {
+            position: absolute;
+            width: 120px;
+            height: 30px;
+            border: 1px solid crimson;
+
+        }
+
+        #arrow {
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            right: 0;
+            border: 1px solid black;
+            background-image: url(images/s_srch_btn.gif);
+            background-size: 100%;
+        }
+
+        #dropMenu {
+            position: absolute;
+            margin-top: 30px;
+            width: 250px;
+            height: 250px;
+            border: 1px solid gray;
+            box-shadow: 2px 2px 5px gray;
+            overflow: scroll;
+            visibility: hidden;
+        }
+
+        #dropMenu div {
+            width: 100%;
+            height: 45px;
+            font-weight: bold;
+            line-height: 45px;
+        }
+
+        #dropMenu div:hover {
+            background: darkblue;
+            color: white;
+        }
+    </style>
+    <script type="text/javaScript">
+        var flag = false;
+        function clicktitle(){
+            if(flag == true){
+                flag = false;
+                document.getElementById("dropMenu").style.visibility = "hidden";
+            }else{
+                flag = true;
+                document.getElementById("dropMenu").style.visibility = "visible";
+            }
+        }
+        function selectno(num){
+            document.getElementById("num").innerHTML = num;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="title" onclick="clicktitle()">
+        <div id="num">02 - </div>
+        <div id="arrow"></div>
+        <div id="dropMenu">
+            <div onclick="selectno('02')">02 - &nbsp;&nbsp;&nbsp;&nbsp; 서울</div>
+            <div onclick="selectno('032')">032 - &nbsp;&nbsp;&nbsp; 경기</div>
+            <div onclick="selectno('051')">051 - &nbsp;&nbsp;&nbsp; 부산</div>
+            <div onclick="selectno('052')">052 - &nbsp;&nbsp;&nbsp; 울산</div>
+            <div onclick="selectno('053')">053 - &nbsp;&nbsp;&nbsp; 대구</div>
+            <div onclick="selectno('054')">054 - &nbsp;&nbsp;&nbsp; 경북</div>
+            <div onclick="selectno('055')">055 - &nbsp;&nbsp;&nbsp; 경남</div>
+        </div>
+    </div>
+    <!-- <hr />
+    <select>
+        <option>서울 02</option>
+        <option>울산 052</option>
+        <option>경상남도 055</option>
+        <option>경상북도 054</option>
+    </select>
+    </hr> -->
+
+
+</body>
+
+</html>

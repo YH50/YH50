@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28_ImageControl12.html</title>
+    <style type="text/css">
+        img {
+            width: 600px;
+            height: 400px;
+        }
+
+        .view {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 5px solid crimson;
+            overflow: hidden;
+        }
+
+        .imgs {
+            position: absolute;
+            width: 4800px;
+            height: 400px;
+            /* border: 2px dott gold; */
+            left: 0;
+            top: 0;
+            transition: 0.7s;
+        }
+
+        #remote {
+            /* position: absolute;
+            bottom: 0px;
+            left: 100px; */
+            /* border: 1px dotted silver; */
+            position: relative;
+            margin: 0 auto;
+            width: 400px;
+            height: 50px;
+            top: 360px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            line-height: 18px;
+            text-align: center;
+            font-weight: bold;
+            background: ivory;
+            border: 2px solid black;
+            margin: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javaScript">
+        var state = false;       //현재 자동 재생 중인지를 저장
+        var num = 0;
+        var timer;
+
+        function changeCss(num){
+            for( var t=1; t<=8; ++t){
+                document.getElementById("btn" + t).style.background = 'ivory';
+                document.getElementById("btn" + t).style.color = 'black';
+            }
+            document.getElementById("btn" + (num+1)).style.background = 'crimson';
+            document.getElementById("btn" + (num+1)).style.color = 'ivory';
+        }
+
+        function preview(){
+            if(state == true) return;
+            if(num == 0) return;    //이미 맨 좌측 이미지에 위치해있다면 함수 실행 종료
+            num--;
+            var dist = 600 * num * (-1);
+            document.getElementById('imgs').style.left = dist + 'px';
+            changeCss(num);
+        }
+
+        function move(i){
+            if(state == true) return;
+            num = i;
+            var dist = num * 600 * (-1);
+            document.getElementById("imgs").style.left = dist + 'px';
+            changeCss(num);
+        }
+
+        function next(){
+            if(num == 7) return;    //이미 맨 우측 이미지에 위치해있다면 함수 실행 종료
+            num++;
+            var dist = 600 * num * (-1);
+            document.getElementById('imgs').style.left = dist + 'px';
+            changeCss(num);
+        }
+
+        function start_stop(){
+            if(state == true){
+                document.getElementById('btn10').innerHTML = '▶';
+                window.clearInterval(timer);
+                state = false;
+            }else{
+                document.getElementById('btn10').innerHTML = '■';
+                timer = window.setInterval(function(){
+                    num++;
+                    if(num > 7) num = 0;
+                    var dist = -600 * num;
+                    document.getElementById('imgs').style.left = dist + 'px';
+                    changeCss(num);
+                }, 1200);
+                state = true;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <body>
+        <div class="view">
+            <div class="imgs" id="imgs">
+                <img src="images/99.jpg" /><img src="images/Koala.jpg" /><img src="images/Desert.jpg" /><img
+                    src="images/Tulips.jpg" /><img src="images/Jellyfish.jpg" /><img src="images/Lighthouse.jpg" /><img
+                    src="images/lamp.jpg" /><img src="images/Penguins.jpg" />
+            </div>
+
+            <div id="remote">
+                <ul>
+                    <li id="btn0" onclick="preview();">◁</li>
+                    <li id="btn1" onclick="move(0);">1</li> <!-- 뉴진스 -->
+                    <li id="btn2" onclick="move(1);">2</li> <!-- 코알라 -->
+                    <li id="btn3" onclick="move(2);">3</li> <!-- 바위 -->
+                    <li id="btn4" onclick="move(3);">4</li> <!-- 튤립 -->
+                    <li id="btn5" onclick="move(4);">5</li> <!-- 해파리 -->
+                    <li id="btn6" onclick="move(5);">6</li> <!-- 등대 -->
+                    <li id="btn7" onclick="move(6);">7</li> <!-- 램프 -->
+                    <li id="btn8" onclick="move(7);">8</li> <!-- 펭귄 -->
+                    <li id="btn9" onclick="next();">▷</li>
+                    <li id="btn10" onclick="start_stop();">▶</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</body>
+
+</html>

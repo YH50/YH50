@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27_ImageControl11.html</title>
+    <style type="text/css">
+        img {
+            width: 600px;
+            height: 400px;
+        }
+
+        .view {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 5px solid pink;
+            overflow: hidden;
+        }
+
+        .imgs {
+            position: absolute;
+            width: 4800px;
+            height: 400px;
+            /* border: 2px dott gold; */
+            left: 0;
+            top: 0;
+            transition: 0.4s;
+        }
+
+        #remote {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 0;
+            left: 250px;
+            /* border: 1px dotted white; */
+        }
+
+        #btn {
+            position: relative;
+            margin: 13px 40px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 19px;
+            background: hotpink;
+            border: 2px solid white;
+        }
+    </style>
+    <script type="text/javaScript">
+        var state = false;       //현재 자동 재생 중인지를 저장
+        var num = 0;
+        var timer;
+
+        function start_stop(){
+            if(state == true){
+                // 버튼 표시를 ▶ 로 변경, interval 멈춤, state -> false
+                document.getElementById('btn').innerHTML = '▶';
+                window.clearInterval(timer);
+                state = false;
+            }else{
+                // 버튼 표시를 ■ 로 변경, interval 재실행, state -> true
+                document.getElementById('btn').innerHTML = '■';
+                timer = window.setInterval(function(){
+                    num++;
+                    if(num > 7) num = 0;
+                    var dist = -600 * num;
+                    document.getElementById('imgs').style.left = dist + 'px';
+                }, 1550);
+                state = true;
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="view">
+        <div class="imgs" id="imgs">
+            <img src="images/99.jpg" /><img src="images/Koala.jpg" /><img src="images/Desert.jpg" /><img
+                src="images/Tulips.jpg" /><img src="images/Jellyfish.jpg" /><img src="images/Lighthouse.jpg" /><img
+                src="images/lamp.jpg" /><img src="images/Penguins.jpg" />
+        </div>
+
+        <div id="remote">
+            <div id="btn" onclick="start_stop();">★</div>
+        </div>
+    </div>
+</body>
+
+</html>
