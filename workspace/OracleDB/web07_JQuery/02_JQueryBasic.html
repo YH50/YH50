@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_JQueryBasic.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javaScript">
+        // 6-1. 자식(자손)선택자와 후손 선택자
+        $(function(){
+            // $('div h1').css('color', 'gold');           //모든 자식을 선택
+            $('div>h1').css('color', 'green');       //바로 아래 수준의 자식을 선택
+
+        });
+
+        //  함수를 이용한 자식, 후손 선택자
+        $(function(){
+            // $('#wrap>section>h1, #wrap>section>p, #wrap>section>h2')
+            // $('#wrap>section').children().css('background-color', 'silver');
+            // $('#wrap>section').children().css('border', '3px solid orange');
+            // $('#wrap>section').children().css('color', 'magenta');
+            // 이렇게 개별적으로 지정을 할 수도 있지만 너무 번잡하기 때문에...
+
+            // css 속성에 들어가는 여러 개의 변경 요소들을 한번에 지정이 가능함
+            $('#wrap>section').children().css(
+                {'background-color':'gold', 'border':'3px solid crimson', 'color':'navy'}
+            );
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 함수를 이용한 후손, 자식 선택자 -->
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용 1</p>
+        <section>
+            <h1>자식 요소 선택자 1</h1>
+            <p>내용 2</p>
+            <h2>자식 요소 선택자 2</h2>
+        </section>
+        <h1>인접 관계 선택자</h1>
+    </div>
+
+    <!-- 자식 선택자와 후손 선택자 -->
+    <div>
+        <h1>자식(자손)선택자와 후손 선택자</h1>
+        <ul>
+            <li>
+                <h1>Apple</h1>
+            </li>
+            <li>Bee</li>
+            <li>Cat</li>
+            <li>Dog</li>
+        </ul>
+        <h1>자식(자손)선택자와 후손 선택자</h1>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- JQuery 기본
+        1. 개요
+        - 모든 브라우저에서 작동하는 클라이언트 자바스크립트 라이브러리.
+        - 다음의 기능을 위해 제작됨
+            . DOM과 관련된 처리를 쉽게 구현
+            . 일관된 이벤트 연결을 쉽게 구현
+            . 시각적 효과를 쉽게 구현
+            . ajax 어플리케이션을 쉽게 구현
+        - 사용 방법
+            1) 직접 다운받아서 사용
+                . head 안에 <script src="jquery-3.7.1.min.js"></script> 를 추가 후 사용
+                
+            2) CDN 호스트로 사용
+                . CDN(Content Delivery Network)
+                . 사용자에게 간편하게 컨텐츠를 제공하는 방식을 뜻함
+                . 구글, MS, jQuery 측에서 사용자가 jQuery를 사용하기 편하게 컨텐츠를 제공
+                . head 안에 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 추가
+            - http://jQuery.com
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_JQueryBasic.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javaScript">
+        // 별도의 JQuery 문법과 양식이 있으며, 자바스크립트와 같이 한 곳에서 사용 가능
+        // 다만 JQuery 명령은 아래의 양식으로 구분하여 사용함
+        $(function(){
+            // JQuery 명령을 쓰는 곳
+        });
+
+        // $(function(){}); 단위의 명령은 개수에 상관없이 필요한 곳에 어느 곳이든 기술이 가능
+
+        // 원래 구조 : document가 준비되면 익명 함수를 실행
+        $(document).ready(
+            function(){
+
+            }
+        );
+        // 위 내용을 간략하게 쓴 것이 "$(function(){});"
+        // 이 안에 jquery 명령이 아무것도 없으면 실행되는 내용 없음. (jquery 명령 인식 x)
+        
+        // 잘못된 예시
+        // $("#tit").css('color', 'red');
+        // 올바른 예시
+        $(function(){
+            $("#tit").css('color', 'white');  // >> id 가 tit인 태그의 글자 색을 변경
+        });
+
+        // JQuery 명령의 형식
+        $(function(){
+            // #('명령을 적용할 대상의 선택자(Selector)').사용가능한 함수();
+            // ex) body의 배경색을 바꾸려고 할 때
+            $('body').css('background-color', 'dodgerblue');    // 태그 selector
+            $("*").css('border', '1px solid gold');             // 전체 selector
+            $("#tit").css('background-color', 'yellowgreen');   // id selector
+            $(".tit2").css('color', '2px solid crimson');     // class selector
+            $("h1, h2").css('border', '2px dashed red');       // 2개 이상 선택
+            $("h1 .tit2").css('color', 'aqua');                 // 후손 selector
+            $("h1.tit2").css('color', 'aqua');                 // 종속 selector h1 태그 중 class가 tit2인 것을 선택
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="tit">집에 보내주세요</h1>
+    <h1>제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3>직접 선택자</h3>
+    <h1 class="tit2">제발요</h1>
+</body>
+
+</html>
