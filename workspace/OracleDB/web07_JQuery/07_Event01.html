@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_Event01.html</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+        span {
+            font-size: 180%;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+    <script type="text/javaScript">
+        $(function(){
+            $('button:eq(0)').click(function(){
+                // show it : span 태그의 배경색을 바꾸고 화면에 표시
+
+                $('span:first').show(1000, function(){
+                    $(this).css('background', 'gold');
+                });
+            });
+            $('button:eq(1)').click(function(){
+                // hide it : span 태그를 숨김 표시
+                $('span:first').hide(1000);
+            });
+
+            $('button:eq(2)').click(function(){
+                $('span:first').toggle(1000, function(){
+                    $(this).css('background', 'pink');
+                });
+            });
+
+            $('button:eq(3)').click(function(){
+                $('span:last').show(2000, function(){
+                    $(this).css('background', 'aqua');
+                });
+            });
+            $('button:eq(4)').click(function(){
+                $('span:last').hide(2000);
+            });
+            $('button:eq(5)').click(function(){
+                $('span:last').toggle(2000, function(){
+                    $(this).css('background', 'hotpink');
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>Show It</button> <!--이렇게도 버튼을 만들 수 있음-->
+    <button>Hide it</button>
+    <button>눌러보이소</button>
+    <span>어여 왔는교</span>
+    <br>
+    <button>Show It Slow</button>
+    <button>Hide It Slow</button>
+    <button>눌러보이소</button>
+    <span>반갑심더</span>
+</body>
+
+</html>

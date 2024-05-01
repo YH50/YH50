@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_JQueryEx.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/jquery.innerfade.js"></script>
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 1080px;
+            height: 480px;
+        }
+
+        #tabs {
+            width: 1080px;
+            height: 50px;
+            display: flex;
+            border: 1px dotted black;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #tabs div {
+            width: 180px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border-radius: 5px 5px 0 0;
+            font-size: 120%;
+            cursor: default;
+            display: flex;
+
+        }
+
+        #content {}
+
+        .contents {}
+    </style>
+    <script type="text/javaScript">
+        $(function(){
+            $('#tabs div:eq(0), #content1').css('background', 'crimson');
+            $('#tabs div:eq(1), #content2').css('background', 'rgb(221, 0, 0)');
+            $('#tabs div:eq(2), #content3').css('background', 'red');
+            $('#tabs div:eq(3), #content4').css('background', 'dodgerblue');
+            $('#tabs div:eq(4), #content5').css('background', 'orange');
+            $('#tabs div:eq(5), #content6').css('background', 'silver');
+            // content들의 배경색을 탭 메뉴와 일치하게 설정
+            // 메뉴 클릭 시 해당 화면이 보이게끔 코딩 (겹쳐있다가 누르면 나오게 설정)
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="tabs">
+            <div>Twins</div>
+            <div>Giants</div>
+            <div>Tigers</div>
+            <div>Lions</div>
+            <div>Eagles</div>
+            <div>Bears</div>
+        </div>
+        <div id="content">
+            <div class="contents" id="content1">Seoul</div>
+            <div class="contents" id="content2">Busan</div>
+            <div class="contents" id="content3">Gwangju</div>
+            <div class="contents" id="content4">Daegu</div>
+            <div class="contents" id="content5">Daejeon</div>
+            <div class="contents" id="content6">Seoul</div>
+        </div>
+    </div>
+</body>
+
+</html>

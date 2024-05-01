@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_Effect03.html</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+        span {
+            color: darkorange;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        div {
+            margin: 3px;
+            width: 100px;
+            display: none;
+            height: 100px;
+            float: left;
+        }
+
+        div#red {
+            background: red;
+        }
+
+        div#green {
+            background: rgb(0, 197, 0);
+        }
+
+        div#blue {
+            background: dodgerblue;
+        }
+    </style>
+    <script type="text/javaScript">
+        $(function(){
+            $('#fIn').click(function(){
+                $('div').fadeIn(1000, function(){});
+            });
+            $('#fOut').click(function(){
+                $('div').fadeOut(1000);
+            });
+            $('#fToggle').click(function(){
+                $('div').fadeToggle(1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <span id="fIn">Fade-in</span>&nbsp;&nbsp;&nbsp;
+    <span id="fOut">Fade-out</span>&nbsp;&nbsp;&nbsp;
+    <span id="fToggle">Fade-toggle</span>&nbsp;&nbsp;&nbsp;
+    <br><br><br><br>
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+</body>
+
+</html>

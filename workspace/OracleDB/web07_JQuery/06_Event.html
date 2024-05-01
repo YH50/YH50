@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_Event.html</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javaScript">
+        // 이벤트 연결 #1
+        // 기존 자바스크립트의 이벤트 연결
+        //  >> 태그 안에 onclick 등의 속성을 넣고 자바스크립트 함수를 연결
+        // 제이쿼리의 이벤트 연결
+        //  >> 선택자로 태그를 선택하고 그 문서 객체에 이벤트 함수를 연결하여 실행함
+
+        // 사용할 이벤트 함수 : on
+        // 사용 형태
+        //  1) $(selector).on(이벤트이름, 익명함수);
+        //  해당 문서객체(selector)에 해당 이벤트가 발생하면 익명함수가 실행되는 형태
+
+        // example
+        $(function(){
+            // h1 태그를 클릭하면 익명함수 내용을 실행
+            // $('h1:eq(0)').on('click', function(){
+            //     $('h1:eq(0)').css({'background':'gold', 'color':'navy'});
+            // });                                                              >> 이거 반복하면 3개 다 색 바뀜
+
+            /*
+            $('h1').on('click', function(){
+                // 현재 클릭된 h1 > this
+                // 클릭된 h1의 인덱스를 변수에 저장
+                var idx = $(this).index();
+                if(idx == 0)
+                    $('h1').eq(idx).css({'background':'gold', 'color':'crimson'});
+                else if(idx == 1)
+                    $('h1:eq('+ idx + ')').css({'background':'aqua', 'color':'crimson'});
+                else
+                    $('h1:eq(2)').css({'background':'crimson', 'color':'ivory'});
+            });
+            */
+
+            /*
+            // 2가지 이벤트를 연결
+            // $('h1').on('mouseover', function(){});
+            // $('h1').on('mouseout', function(){});
+            $('h1').on('mouseover', function(){
+                // 현재 클릭된 h1 > this
+                // 클릭된 h1의 인덱스를 변수에 저장
+                var idx = $(this).index();
+                if(idx == 0)
+                    $('h1').eq(idx).css({'background':'gold', 'color':'crimson'});
+                else if(idx == 1)
+                    $('h1:eq('+ idx + ')').css({'background':'aqua', 'color':'crimson'});
+                else
+                    $('h1:eq(2)').css({'background':'crimson', 'color':'ivory'});
+            });
+            $('h1').on('mouseout', function(){
+                $(this).css({'background':'white', 'color':'black'});
+            });
+            */
+
+            /*
+            $('h1').on(
+                {
+                    'mouseover':function(){
+                        $(this).css({'background':'crimson', 'color':'gold'});
+                    },
+                    'mouseout':function(){
+                        $(this).css({'background':'white', 'color':'black'});
+                    } 
+                }
+            );
+            */
+           
+            $('h1').hover(
+                function(){
+                    $(this).css({'background':'crimson', 'color':'gold'});
+                },
+                function(){
+                    $(this).css({'background':'white', 'color':'black'});
+                }
+            );
+
+            // 주요 이벤트들 키워드 //
+            /*
+            - click : 마우스 클릭 시 이벤트 발생
+            - dbclick : 마우스 더블클릭 시 (이벤트 발생)
+            - mousedown : 마우스 버튼을 누를 때
+            - mouseup : 마우스 버튼을 뗄 때
+            - mouseenter : 마우스가 요소의 경계 외부에서 내부로 이동할 때
+            - mouseleave : ------------------- 내부에서 외부로 이동할 때
+            - mousemove : 마우스를 움직일 때
+            - mouseout : 마우스가 요소를 벗어날 때
+            - mouseover : 마우스가 요소 내에 들어올 때
+
+            - keydown : 키보드가 눌려질 때
+            - keypress : 글자가 입력될 때
+            - keyup : 키보드가 떼질 때
+            */
+
+            $('textarea').keyup(function(){
+                var inputlength = $(this).val().length;     // 글자 수 추출
+                var remain = 150 - inputlength;
+                $('h2').html(remain);
+
+                if(remain >= 0) $('h2').css('color', 'blue');    // 남은 글자 수가 양수면 파란색
+                else $('h2').css('color', 'crimson');       // 남은 글자 수가 음수면 빨간색
+            });
+
+            // 이벤트 제거
+            $('h1').on('click', function(){
+                $(this).html('해체해 DIE');
+                $(this).off();  //이벤트 제거
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <p>SMS</p>
+        <textarea cols="70" rows="5"></textarea>
+        <h2>150</h2>
+    </div>
+
+
+    <!-- 이벤트 연결, 제거 -->
+    <h1>개qudtls 롯데자이언츠</h1>
+    <h1>30경기 유일 한자리 승수 팀</h1>
+    <h1>느그가 프로가</h1>
+</body>
+
+</html>

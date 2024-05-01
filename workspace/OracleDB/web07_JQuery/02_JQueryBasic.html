@@ -29,12 +29,86 @@
 
         });
 
+        /*   함수형 선택자들 정리 
+
+        $('요소선택자').parent() : 요소선택자의 부모 요소를 선택
+        $('요소선택자').parents() : 요소선택자의 상위 요소들을 모두 선택
+        $('요소선택자').closest("div") : 요소선택자의 상위 요소 중 가장 인접한 div만 선택
+        $('요소선택자').children() : 요소선택자의 모든 자식 요소들을 선택
+
+        $('요소선택자').prev() : 요소선택자의 바로 이전의 요소를 선택
+        $('요소선택자').prevAll() : 요소선택자의 모든 이전 요소들을 선택
+        $('요소선택자').prevUntil() : 요소선택자의 요소명에 지정한 곳까지 모두 선택
+        $('요소선택자').next() : 요소선택자의 바로 다음 요소를 선택
+        $('요소선택자').nextAll() : 요소선택자의 모든 다음 요소들을 선택
+        $('요소선택자').nextUntil('h2') : 요소선택자부터 h2 태그 요소까지 모두 선택
+        
+        */
+
+        // 형제 선택자
+        $(function(){
+            // 변경할 style을 객체에 저장하고 객체 변수를 통해 style을 변경이 가능함
+            var style1 = {"background-color":"gold", "border":"2px solid crimson"};
+            var style2 = {"background-color":"aqua", "border":"2px dashed red"};
+
+            // $('.text').prev().css(style1);
+            // $('.text').next().css(style2);
+
+            // $('.text').prevAll().css(style1);   //text 클래스 이전의 모든 요소에 적용
+            // $('.text').nextAll().css(style2);   //text 클래스 다음의 모든 요소에 적용
+
+            $('.text').prevUntil('h1').css(style1);   //text 클래스 바로 위부터 h1 아래까지 모든 요소에 적용
+            $('.text').nextUntil('h1').css(style2);   //text 클래스 다음의 모든 요소에 적용
+
+
+        });
+
+        // .parents()   parents('div')
+        $(function(){
+            // .txt1의 모든 부모들
+            $('.txt1').parents().css({'border':'3px dashed gray'});
+            // .txt1의 부모만
+            $('.txt1').parent().css({'border':'3px dashed dodgerblue'});
+            // .txt2의 부모들 중 div 만
+            $('.txt2').parents('div').css({'border':'3px dashed crimson'});
+        })
+
     </script>
 </head>
 
 <body>
+
+    <!-- .parents()     parents('div') -->
+    <h1 class="title">선택자</h1>
+    <section>
+        <div>
+            <p class="txt1">롯데 해체해라1</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p class="txt2">롯데 해체해라2</p>
+        </div>
+    </section>
+
+
+    <!-- 함수를 이용한 형제 선택자 -->
+    <!-- prev(), next(), prevAll(), nextAll(), prevUntil(), nextUntil() -->
+    <!-- <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용0</p>
+        <p>내용1</p>
+        <p class="text">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div> -->
+
+
+
+
+
     <!-- 함수를 이용한 후손, 자식 선택자 -->
-    <div id="wrap">
+    <!-- <div id="wrap">
         <h1>인접 관계 선택자</h1>
         <p>내용 1</p>
         <section>
@@ -43,10 +117,10 @@
             <h2>자식 요소 선택자 2</h2>
         </section>
         <h1>인접 관계 선택자</h1>
-    </div>
+    </div> -->
 
     <!-- 자식 선택자와 후손 선택자 -->
-    <div>
+    <!-- <div>
         <h1>자식(자손)선택자와 후손 선택자</h1>
         <ul>
             <li>
@@ -57,7 +131,7 @@
             <li>Dog</li>
         </ul>
         <h1>자식(자손)선택자와 후손 선택자</h1>
-    </div>
+    </div> -->
 </body>
 
 </html>

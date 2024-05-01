@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_EffectEx.html</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+        div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        img {
+            width: 450px;
+            height: 300px;
+        }
+    </style>
+    <script type="text/javaScript">
+        var ino = 0;
+        $(function(){
+            window.setInterval(function(){
+                for(var i=0;i<=5;++i)
+                    $('div').eq(i).fadeOut(2000);
+
+                $('div').eq(ino).fadeIn(2000);
+                ino++;
+                if(ino>5) ino = 0;
+            }, 2300);
+        });
+    </script>
+</head>
+
+<body>
+    <div><img src="images/99.jpg" /></div>
+    <div><img src="images/ddalbae.jpg" /></div>
+    <div><img src="images/Desert.jpg" /></div>
+    <div><img src="images/Hydrangeas.jpg" /></div>
+    <div><img src="images/Penguins.jpg" /></div>
+    <div><img src="images/Tulips.jpg" /></div>
+</body>
+
+</html>
