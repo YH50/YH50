@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_CardContent.html</title>
+    <style type="text/css">
+        section {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .media {
+            display: flex;
+            background: rgb(255, 255, 230);
+            width: 600px;
+            padding: 10px;
+            border: 1px dotted black;
+        }
+
+        .media img {
+            width: 100px;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .media-body {
+            flex: 3;
+        }
+
+        /* 768~1024에서는 media 만 세로로 */
+        /* 768 이하로는 이미지와 media-body가 세로로 */
+
+        @media (min-width:768px) and (max-width:1023px) {
+            section {
+                flex-direction: column;
+            }
+
+            .media {
+                width: 90%;
+                margin: 15px;
+            }
+        }
+
+        @media (max-width:768px) {
+            section {
+                flex-direction: column;
+            }
+
+            .media {
+                width: 90%;
+                margin: 15px;
+                flex-direction: column;
+            }
+
+            .media img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="media">
+            <img src="images/photo-01.png" />
+            <div class="media-body">
+                <h3>부산갈매기</h3>
+                <p>
+                    지금은 그 어디서 내 생각 잊었는가 꽃처럼 어여쁜 그 이름도 고왔던 순이 순이야
+                    파도치는 부둣가에 지나간 일들이 가슴에 남았는데 부산갈매기 부산갈매기 너는 정녕 나를 잊었나
+                </p>
+            </div>
+        </div>
+
+        <div class="media">
+            <img src="images/photo-02.png" />
+            <div class="media-body">
+                <h3>돌아와요 부산항에</h3>
+                <p>
+                    꽃피는 동백섬에 봄이 왔건만 형제떠난 부산항에 갈매기만 슬피우네
+                    오륙도 돌아가는 연락선마다 목메어 불러봐도 대답없는 내형제여
+                    돌아와요 부산항에 그리운 내 형제여
+                </p>
+            </div>
+        </div>
+
+        <div class="media">
+            <img src="images/photo-03.png" />
+            <div class="media-body">
+                <h3>서울의 모정</h3>
+                <p>
+                    빛나는 새아침이 밝아오면은 발걸음 가벼운 태양의 거리
+                    그리운 하늘을 쳐다보면서 오늘도 LG와 둘이서
+                    나가자 LG 싸우자 LG 서울 LG 트윈스 이기자 LG 승리의 LG 언제언제까지나
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -13,21 +13,22 @@
             flex-direction: column;
             width: 1080px;
             height: 480px;
+            margin: 100px auto;
         }
 
         #tabs {
             width: 1080px;
             height: 50px;
             display: flex;
-            border: 1px dotted black;
             font-weight: bold;
             text-align: center;
             line-height: 50px;
         }
 
         #tabs div {
+            border: 1px solid black;
             width: 180px;
-            height: 40px;
+            height: 50px;
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
@@ -38,11 +39,29 @@
 
         }
 
-        #content {}
+        #content {
+            position: relative;
+            margin: 0 auto;
+            width: 1080px;
+            height: 440px;
+        }
 
-        .contents {}
+        .contents {
+            position: absolute;
+            width: 1080px;
+            height: 440px;
+            left: 0;
+            top: 0;
+            text-align: center;
+            line-height: 440px;
+            font-size: 200%;
+            font-weight: bold;
+            border: 1px solid black;
+        }
     </style>
     <script type="text/javaScript">
+        // content들의 배경색을 탭 메뉴와 일치하게 설정
+        // 메뉴 클릭 시 해당 화면이 보이게끔 코딩 (겹쳐있다가 누르면 나오게 설정)
         $(function(){
             $('#tabs div:eq(0), #content1').css('background', 'crimson');
             $('#tabs div:eq(1), #content2').css('background', 'rgb(221, 0, 0)');
@@ -50,8 +69,15 @@
             $('#tabs div:eq(3), #content4').css('background', 'dodgerblue');
             $('#tabs div:eq(4), #content5').css('background', 'orange');
             $('#tabs div:eq(5), #content6').css('background', 'silver');
-            // content들의 배경색을 탭 메뉴와 일치하게 설정
-            // 메뉴 클릭 시 해당 화면이 보이게끔 코딩 (겹쳐있다가 누르면 나오게 설정)
+        });
+
+        $(function(){
+            $('#tabs div').click(function(){
+                var idx = $(this).index();
+                var selectDiv = '#content' + (idx+1);
+                $('.contents').hide();
+                $(selectDiv).show();
+            });
         });
     </script>
 </head>
@@ -67,12 +93,12 @@
             <div>Bears</div>
         </div>
         <div id="content">
-            <div class="contents" id="content1">Seoul</div>
-            <div class="contents" id="content2">Busan</div>
-            <div class="contents" id="content3">Gwangju</div>
-            <div class="contents" id="content4">Daegu</div>
-            <div class="contents" id="content5">Daejeon</div>
-            <div class="contents" id="content6">Seoul</div>
+            <div class="contents" id="content1">SEOUL</div>
+            <div class="contents" id="content2">BUSAN</div>
+            <div class="contents" id="content3">GWANGJU</div>
+            <div class="contents" id="content4">DAEGU</div>
+            <div class="contents" id="content5">DAEJEON</div>
+            <div class="contents" id="content6">SEOUL</div>
         </div>
     </div>
 </body>

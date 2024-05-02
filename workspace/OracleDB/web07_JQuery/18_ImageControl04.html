@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18_ImageControl04.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+        #view {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 2px solid royalblue;
+            left: 50px;
+            overflow: hidden;
+        }
+
+        #imgs {
+            position: absolute;
+            width: 4800px;
+            height: 400px;
+            left: 0;
+            top: 0;
+            /* border: 1px dashed crimson; */
+        }
+
+        img {
+            width: 600px;
+            height: 400px;
+        }
+
+        #remote {
+            position: absolute;
+            width: 218px;
+            height: 50px;
+            /* border: 1px dotted white; */
+            bottom: 0;
+            left: 210px;
+        }
+
+        #remote div {
+            position: relative;
+            width: 18px;
+            height: 18px;
+            background: ivory;
+            /* border: 1px solid black; */
+            border-radius: 50%;
+            float: left;
+            margin: 16px 4px;
+            margin-left: 5px;
+            line-height: 18px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #remote .selected {
+            background-color: crimson;
+            color: yellow;
+            border: 1px solid navy;
+        }
+    </style>
+    <script type="text/javaScript">
+        /* 
+         버튼 클릭 시 해당 이미지의 위치로 animate 를 이용하여 imgs 를 이동
+         클릭된 번호는 addClass 로 검은 바탕에 흰 글씨로 반전
+         클릭되지 않은 번호는 흰바탕에 검은 글씨 유지
+        */
+       var ino;
+       $(function(){
+            $('#remote div').addClass('#remote .selected');
+            $('#remote div').click(function(){
+                var idx = $(this).index();
+                var dist = -600 * idx;
+                $('#imgs').animate({left:dist}, 500);
+                $('#remote div').removeClass('selected');
+                $('#remote div').eq(idx).addClass('selected');
+            });
+       });
+    </script>
+</head>
+
+<body>
+    <div id="view">
+        <div id="imgs"><img src="images/99.jpg"><img src="images/hanni.jpg"><img src="images/ddalbae.jpg"><img
+                src="images/Hydrangeas.jpg"><img src="images/Penguins.jpg"><img src="images/전준우.jpg"><img
+                src="images/Tulips.jpg"><img src="images/Lighthouse.jpg"></div>
+        <div id="remote">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
+</body>
+
+</html>

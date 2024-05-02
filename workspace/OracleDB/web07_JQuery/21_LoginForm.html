@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21_LoginForm.html</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-form {
+            width: 600px;
+            background: ivory;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        .login-form h2 {
+            font-weight: normal;
+            font-size: 28px;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+        .field {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        label {
+            flex: 1;
+        }
+
+        input {
+            flex: 4;
+            padding: 5px;
+            border-radius: 7px;
+            border: 1px solid gray;
+        }
+
+        .login-button {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-login {
+            padding: 7px 40px;
+            border: none;
+            background: green;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .sns-login {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .btn {
+            flex: 1;
+            margin: 10px 3px;
+            padding: 8px;
+            border: none;
+            font-size: 20px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .btn.fb {
+            background: royalblue;
+        }
+
+        .btn.ig {
+            background: rgb(202, 0, 202);
+        }
+
+        .btn.google {
+            background: crimson;
+        }
+
+        .btn.kakao {
+            background: rgb(255, 189, 23);
+            color: black;
+        }
+
+        @media (max-width:768px) {
+            .login-form {
+                width: 100%;
+            }
+
+            .field {
+                flex-direction: column;
+                margin: 15px 0;
+            }
+
+            .login-button {
+                margin-top: 20px;
+            }
+
+            .btn-login {
+                flex: 1;
+                margin-bottom: 20px;
+            }
+
+            .sns-login {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <form class="login-form">
+        <h2>마 로그인해라</h2>
+        <div class="field">
+            <label>User ID</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password">
+        </div>
+
+        <div class="login-button">
+            <button class="btn-login">Log in</button>
+        </div>
+        <div class="sns-login">
+            <button class="btn fb">Facebook</button>
+            <button class="btn ig">Instagram</button>
+            <button class="btn google">Google</button>
+            <button class="btn kakao">Kakao</button>
+        </div>
+    </form>
+</body>
+
+</html>

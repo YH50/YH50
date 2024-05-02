@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_ImageControl05.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+        #view {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border: 3px solid coral;
+            left: 50px;
+            overflow: hidden;
+        }
+
+        #imgs {
+            position: absolute;
+            width: 4800px;
+            height: 400px;
+            left: 0;
+            top: 0;
+            /* border: 1px dashed crimson; */
+        }
+
+        img {
+            width: 600px;
+            height: 400px;
+        }
+
+        #remote {
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            border: 2px dashed coral;
+            border-radius: 10px 10px 0 0;
+            border-bottom: none;
+            bottom: 0;
+            left: 160px;
+        }
+
+        #remote div {
+            cursor: pointer;
+            position: relative;
+            width: 18px;
+            height: 18px;
+            background: ivory;
+            border: 1px solid black;
+            border-radius: 50%;
+            float: left;
+            margin: 16px 2px;
+            margin-left: 5px;
+            line-height: 17px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #remote .selected {
+            background-color: crimson;
+            color: yellow;
+            border: 1px solid royalblue;
+        }
+    </style>
+    <script type="text/javaScript">
+
+    $(function(){
+        var ino = 0;
+        var timer;
+        var state=false;
+
+        $('#remote div').click(function(){
+            var idx = $(this).index();
+            if(idx == 0){
+                if(ino==0) return;              // if 먼저 안써주면 그전거까지 계속 넘어감!
+                ino--;                          // 위에거랑 이거랑 순서 꼭 지켜야함
+                var dist = -600 * ino;          
+                $('#imgs').animate({left:dist}, 800);
+            }else if(idx == 9){
+                if(ino==7) return;              // 여기도 마찬가지로 if 먼저 안써주면 제한범위 오버됨
+                ino++;                          // 위에거랑 이거랑 순서 꼭 지켜야함
+                var dist = -600 * ino;          
+                $('#imgs').animate({left:dist}, 800);
+            }else if(idx == 10){    //자동버튼
+                if(state == false){ //자동 동작 멈춤
+                    state = true;
+                    $('#remote div:eq(10)').html('■');
+                    timer = window.setInterval(function(){
+                        ino++;
+                        if(ino>7) ino=0;
+                        var dist = -600 * ino;
+                        $('#imgs').animate({left:dist}, 800);
+                        $('#remote div').removeClass('selected');
+                        $('#remote div').eq(ino+1).addClass('selected');     
+                    },2000);
+                }else{  //자동 동작
+                    state = false;
+                    $('#remote div:eq(10)').html('▶');
+                    window.clearInterval(timer);
+                }
+            }else{
+                ino = idx - 1;
+                var dist = -600 * ino;          
+                $('#imgs').animate({left:dist}, 800);
+            }
+            $('#remote div').removeClass('selected');
+            $('#remote div').eq(ino+1).addClass('selected');
+
+        });
+
+
+
+
+        /*          내가 한 거랑 비교해서 봐라 제발 꼭 비교하면서 공부해라...
+            // $('#remote div').addClass('#remote .selected');
+
+            $('#remote div:eq(0)').click(function(){
+            var idx = $(this).index();
+            var dist = -600 * idx;          
+            idx--;
+            if(idx==0) return;
+            $('#imgs').animate({left:dist}, 500);
+            $('#remote div').removeClass('selected');
+            $('#remote div').eq(idx).addClass('selected');
+        });
+
+        $('#remote div:eq(9)').click(function(){
+            ino++;
+            if(ino==7) return;
+            var dist = -600 * ino;
+            $('#imgs').animate({left:dist}, 500);
+            $('#remote div').removeClass('selected');
+            $('#remote div').eq(idx).addClass('selected');
+        });
+
+        $('#remote div:eq(10)').click(function(){
+            $('#view').hover(
+                function(){
+                    window.clearInterval(timer);
+                },
+                function(){
+                    timer = window.setInterval(function(){
+                        ino++;
+                        if(ino>7) ino=0;
+                        $('#imgs').animate({left: ino * (-600)}, 900);
+                    }, 2000);
+                }
+            );
+        });
+        */
+    });
+
+    </script>
+</head>
+
+<body>
+    <div id="view">
+
+        <div id="imgs"><img src="images/99.jpg"><img src="images/hanni.jpg"><img src="images/ddalbae.jpg"><img
+                src="images/전준우.jpg"><img src="images/Penguins.jpg"><img src="images/Hydrangeas.jpg"><img
+                src="images/Tulips.jpg"><img src="images/Lighthouse.jpg"></div>
+        <div id="remote">
+            <div>◁</div>
+            <div>1</div> <!--nwjns-->
+            <div>2</div> <!--hanni-->
+            <div>3</div> <!--DDB-->
+            <div>4</div> <!--JJW-->
+            <div>5</div> <!--penguin-->
+            <div>6</div> <!--sooguk-->
+            <div>7</div> <!--tuilp-->
+            <div>8</div> <!--lighthouse-->
+            <div>▷</div>
+            <div>▶</div>
+        </div>
+    </div>
+</body>
+
+</html>
