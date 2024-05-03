@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_#1.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+        #view {
+            position: relative;
+            width: 900px;
+            height: 600px;
+            border: 3px solid crimson;
+            left: 75px;
+            overflow: hidden;
+        }
+
+        #imgs {
+            position: absolute;
+            width: 5400px;
+            height: 600px;
+            left: 0;
+            top: 0;
+            /* border: 1px dashed crimson; */
+        }
+
+        img {
+            width: 900px;
+            height: 600px;
+        }
+
+        #remote {
+            position: absolute;
+            width: 300px;
+            height: 75px;
+            border: 1px dotted gainsboro;
+            border-bottom: none;
+            bottom: 0;
+            right: 0;
+        }
+
+        #remote div {
+            cursor: pointer;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background: ivory;
+            border: 1px solid black;
+            border-radius: 50%;
+            float: left;
+            left: 35px;
+            margin: 24px 10px;
+            margin-left: 5px;
+            line-height: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #remote .selected {
+            width: 54px;
+            border-radius: 100px 100px 100px 100px;
+        }
+
+        #exp {
+            position: absolute;
+            width: 5400px;
+            height: 75px;
+            background: #000;
+            color: white;
+            opacity: 0.8;
+            bottom: 0;
+            display: flex;
+        }
+
+        #title {
+            display: flex;
+            flex-direction: column;
+            width: 900px;
+        }
+
+        #title div {
+            margin-left: 50px;
+        }
+
+        #title div:first-child {
+            font-weight: bold;
+            font-size: 130%;
+        }
+
+        #indicator {
+            position: absolute;
+            display: flex;
+            width: 900px;
+            top: 0;
+            left: 860px;
+            color: white;
+            font-size: 120%;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javaScript">
+        $(function(){
+            var ino = 0;
+            var timer;
+
+            timer = window.setInterval(function(){
+                ino++;
+                if (ino > 5) ino = 0;
+                var dist = -900 * ino;
+                $('#imgs').animate({left:dist}, 900);
+                $('#exp').animate({left:dist}, 900);
+                $('#remote div').removeClass('selected');
+                $('#remote div').eq(ino).addClass('selected');
+            }, 3000);
+            // $('#remote div').addClass('#remote .selected');
+            // $('#remote div').click(function(){
+            //     var idx = $(this).index();
+            //     var dist = -900 * idx;
+            //     $('#imgs').animate({left:dist}, 900);
+            //     $('#exp').animate({left:dist}, 900);
+            //     $('#remote div').removeClass('selected');
+            //     $('#remote div').eq(idx).addClass('selected');
+            // });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="view">
+        <div id="imgs"><img src="images/99.jpg" /><img src="images/Tulips.jpg" /><img
+                src="images/Chrysanthemum.jpg" /><img src="images/Hydrangeas.jpg" /><img src="images/Desert.jpg" /><img
+                src="images/98.jpg" /></div>
+
+        <div id="exp">
+            <div id="title">
+                <div>1st Image</div>
+                <div>Seasons change and our love went cold.<br> Run away, but we're running in circles.</div>
+            </div>
+            <div id="title">
+                <div>2nd Image</div>
+                <div>Seasons change and our love went cold.<br> Run away, but we're running in circles.</div>
+            </div>
+            <div id="title">
+                <div>3rd Image</div>
+                <div>Seasons change and our love went cold.<br> Run away, but we're running in circles.</div>
+            </div>
+            <div id="title">
+                <div>4th Image</div>
+                <div>Seasons change and our love went cold.<br> Run away, but we're running in circles.</div>
+            </div>
+            <div id="title">
+                <div>5th Image</div>
+                <div>Seasons change and our love went cold.<br> Run away, but we're running in circles.</div>
+            </div>
+            <div id="title">
+                <div>6th Image</div>
+                <div>Seasons change and our love went cold.<br> Run away, but we're running in circles.</div>
+            </div>
+        </div>
+        <div id="remote">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="indicator">
+            <div>1/6</div>
+            <div>2/6</div>
+            <div>3/6</div>
+            <div>4/6</div>
+            <div>5/6</div>
+            <div>6/6</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

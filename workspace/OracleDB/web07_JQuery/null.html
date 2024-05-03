@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_Product.html</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 1000px;
+            display: flex;
+            height: 300px;
+            border: 1px solid red;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            /* border: 1px dotted black; */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box:hover .caption {
+            transform: translateY(-300px);
+            transition: 0.6s;
+        }
+
+        .caption {
+            background: black;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 300px;
+            opacity: 0.7;
+        }
+
+        .caption h1,
+        .caption p {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="images/전준우8.jpg" width="300" height="300">
+            <div class="caption">
+                <h1>전 준 우</h1><br><br>
+                <p>생년월일: 1986.02.25</p>
+                <p>포지션: 지명타자, 외야수</p>
+                <p>08 롯데 2차 2라운드 15순위</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/최동원11.jpg" width="300" height="300">
+            <div class="caption">
+                <h1>최 동 원</h1><br><br>
+                <p>생년월일: 1958.05.24</p>
+                <p>포지션: 선발투수</p>
+                <p>83 롯데 1차 지명</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/전미르61.jpg" width="300" height="300">
+            <div class="caption">
+                <h1>전 미 르</h1><br><br>
+                <p>생년월일: 2005.08.15</p>
+                <p>포지션: 중간계투</p>
+                <p>23 롯데 1라운드 전체 3순위</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
