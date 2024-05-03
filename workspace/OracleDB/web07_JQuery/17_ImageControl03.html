@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_ImageControl.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <style type="text/css">
+        #view {
+            position: relative;
+            width: 170px;
+            height: 255px;
+            border: 3px solid royalblue;
+            left: 50px;
+            overflow: hidden;
+        }
+
+        #imgs {
+            position: absolute;
+            width: 1700px;
+            height: 255px;
+            left: 0;
+            top: 0;
+            border: dashed crimson;
+        }
+    </style>
+    <script type="text/javaScript">
+        // 1초에 1칸씩(170px) 이동, animate 사용
+        // 마우스가 올라가면 멈춤, 마우스가 빠지면 재개
+        var ino = 0;
+        var timer;
+        $(function(){
+            $('#view').hover(
+                function(){
+                    window.clearInterval(timer);
+                },
+                function(){
+                    timer = window.setInterval(function(){
+                        ino++;
+                        if(ino>9) ino=0;
+                        $('#imgs').animate({left: ino * (-170)}, 900);
+                    }, 2000);
+                }
+            );
+            $('#imgs').trigger('mouseleave');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="view">
+        <div id="imgs"><img src="images/1.jpg"><img src="images/2.jpg"><img src="images/3.jpg"><img
+                src="images/4.jpg"><img src="images/5.jpg"><img src="images/6.jpg"><img src="images/7.jpg"><img
+                src="images/8.jpg"><img src="images/9.jpg"><img src="images/10.jpg"></div>
+    </div>
+</body>
+
+</html>

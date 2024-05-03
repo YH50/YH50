@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_ImageControl.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javaScript">
+
+        var ino1 = 1;
+        var ino2 = 1;
+        var ino3 = 1;
+
+        // 첫번째 이미지 : 클릭할때마다 다음 이미지로
+        $(function(){
+            $('img:eq(0)').click(function(){
+                ino1++;
+                if(ino1>10) ino1 = 1;
+                $('img:eq(0)').attr('src','images/' + ino1 + '.jpg');
+            });
+        });
+        // 두번째 이미지 : setInterval로 1초에 하나씩 다음 이미지로
+        $(function(){
+            window.setInterval(function(){
+                ino2++;
+                if(ino2>10) ino2 = 1;
+                $('img:eq(1)').attr('src','images/' + ino2 + '.jpg');
+            },800);
+        });
+
+        // 세번째 이미지 : 두번째와 같이 작동하되 마우스가 올라가면 멈춤, 빠지면 재개
+        var timer;
+        $(function(){
+            $('img:eq(2)').hover(
+                function(){
+                    window.clearInterval(timer);
+                },
+                function(){
+                    timer = window.setInterval(function(){
+                        ino3++;
+                        if(ino3>10) ino3 = 1;
+                        $('img:eq(2)').attr('src','images/' + ino3 + '.jpg');
+                    }, 500);
+                }
+            );
+            $('img:eq(2)').trigger('mouseleave');
+        });
+    </script>
+</head>
+
+<body>
+    <img src="images/1.jpg">
+    <img src="images/1.jpg">
+    <img src="images/1.jpg">
+</body>
+
+</html>

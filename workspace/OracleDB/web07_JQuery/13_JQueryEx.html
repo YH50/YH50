@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_JQueryEx.html</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/jquery.innerfade.js"></script>
+    <style type="text/css">
+        body {
+            background: royalblue;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            font-size: 40px;
+            margin: 5px 0;
+            color: ivory;
+            transition: 0.5s;
+            opacity: 0.7;
+        }
+
+        .gnb {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        }
+    </style>
+    <script type="text/javaScript">
+    // 메뉴에 마우스를 올리면 해당 메뉴의 투명도를 1로 변경, 나머지는 0.3으로 변경
+    // 메뉴 영역에서 완전히 마우스가 나가면 모든 메뉴의 투명도를 1로 변경
+        $(function(){
+            $('a').mouseover(function(){
+                var idx = $(this).index();
+                $('a').css('opacity','0.3');
+                $('a').eq(idx).css('opacity','1');
+            });
+            $('.gnb').mouseout(function(){
+                $('a').css('opacity','0.6')
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="gnb">
+        <a href="none">New Arrivals</a>
+        <a href="none">S/S Collection</a>
+        <a href="none">F/W Collection</a>
+        <a href="none">Special Offers</a>
+        <a href="none">Trends</a>
+    </div>
+</body>
+
+</html>
