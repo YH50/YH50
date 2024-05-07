@@ -22,6 +22,7 @@
 		 <label for="pwd_re">비밀번호 확인</label>	
 		 	<input type = "password" id = "pwd_re" name = "pwd_re"><br>	
 		 <input type = "submit" value = "회원가입"> 		 
+		 <input type = "hidden" name="email" value="khr0722@ador.kr"/>
 	</form>
 </body>
 </html>
