@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>101_ActionTag.jsp</title>
+</head>
+<body>
+	<!-- 액션 태그 실습의 목적이므로 서블릿 사용은 안하고 do 파일 이용 -->
+	
+<form action="102_ActionTag_do.jsp">
+	아이디 : <input type="text" name="userID"><br>
+	암 &nbsp; 호 : <input type="password" name="userPwd"><br>
+	<input type="radio" name="loginCheck" value="user" checked="checked"> 사용자
+	<input type="radio" name="loginCheck" value="manager"> 관리자
+	<br>
+	<input type="submit" value="로그인">	
+</form>
+
+</body>
+</html>
