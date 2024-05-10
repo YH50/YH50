@@ -1,0 +1,14 @@
+package com.himeida.board.controller.action;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class LoginAction implements Action {
+
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) {
+
+	}
+
+}
